@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Hearing Aids in Victoria, TX | Brown Hearing Centers</title>
+<meta name="description" content="Hearing aid help in Victoria, TX. Start with a free consultation at Brown Hearing Centers, a family-owned hearing care company that opened its first office in Victoria in 1962.">
+<meta name="theme-color" content="#051c3b">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+<!--
+  STEP 4A FIRST DRAFT: internal notes for Step 4B / 5 (delete before launch)
+  - Image placeholders: IMG-HERO-01, IMG-PROVIDER-01, IMG-HERITAGE-01, IMG-PRODUCT-01, IMG-CLINIC-01
+  - Google rating 4.9 / 51 reviews captured Oct 30, 2026 (RESEARCH.md G1). Recheck before launch.
+  - Privacy Policy URL is the candidate from RESEARCH.md S29 (Awaiting_Client.md I-1). Confirm.
+  - Footer {{location.name}} token must resolve in the GHL sub-account (Awaiting_Client.md I-2).
+  - Form iframe ID changed from "inline-" to "formEmbed-" (Onspire standard, autoscroll fix); data-layout-iframe-id updated to match. Nothing else in the embed was changed.
+  - Header is navy, not white as DESIGN_SYSTEM.md suggested: the client's header/footer logos are light-on-navy (see live-site screenshots). Verify logo files render correctly.
+  - Reviews are verbatim from RESEARCH.md section 7A (R3, R4, R2). Do not edit wording.
+-->
+
+<style>
+/* ---------- Tokens ---------- */
+:root{
+  --primary:#12639a;
+  --primary-dark:#0e4f7c;
+  --navy:#051c3b;
+  --peach:#f6c8a4;
+  --cream:#fdf4ed;
+  --white:#ffffff;
+  --text:#26364a;
+  --muted:#526174;
+  --border:#d6dfe5;
+  --control:#68788b;
+  --star:#d99100;
+  --font-head:'Lora',Georgia,'Times New Roman',serif;
+  --font-body:'Open Sans',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  --header-h:124px;
+  --gutter:20px;
+  --sec-y:56px;
+}
+@media (min-width:768px){:root{--gutter:32px;--sec-y:72px}}
+@media (min-width:1024px){:root{--gutter:40px;--sec-y:96px}}
+@media (min-width:1100px){:root{--header-h:88px}}
+
+/* ---------- Base ---------- */
+*,*::before,*::after{box-sizing:border-box}
+html{
+  -webkit-text-size-adjust:100%;
+  scroll-padding-top:calc(var(--header-h) + 12px);
+  scrollbar-gutter:stable;
+  overflow-x:clip;
+}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{
+  margin:0;
+  overflow-x:clip;
+  font:400 18px/1.6 var(--font-body);
+  color:var(--text);
+  background:var(--white);
+}
+@media (max-width:767px){body{font-size:17px}}
+h1,h2,h3,h4,p,ul,ol,figure,address,blockquote{margin:0}
+ul,ol{padding:0;list-style:none}
+img,svg{display:block;max-width:100%}
+a{color:var(--primary);text-underline-offset:3px}
+a:hover{color:var(--primary-dark)}
+address{font-style:normal}
+h1,h2,h3{font-family:var(--font-head);font-weight:600;color:var(--navy)}
+h1{font-size:clamp(2.125rem,1.4rem + 2.6vw,3.5rem);line-height:1.15;letter-spacing:-.01em}
+h2{font-size:clamp(1.75rem,1.35rem + 1.5vw,2.5rem);line-height:1.25}
+h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
+.lead{font-size:clamp(1.125rem,1.05rem + .35vw,1.3125rem);line-height:1.55;color:var(--text)}
+.small{font-size:16px;line-height:1.55;color:var(--muted)}
+.visually-hidden{position:absolute!important;width:1px;height:1px;margin:-1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+
+:focus-visible{outline:3px solid var(--navy);outline-offset:3px;box-shadow:0 0 0 6px #fff;border-radius:4px}
+.on-dark :focus-visible,.site-header :focus-visible{outline-color:#fff;box-shadow:0 0 0 6px var(--navy)}
+
+.skip-link{position:absolute;left:12px;top:-100px;z-index:200;background:#fff;color:var(--navy);padding:12px 18px;border-radius:8px;font-weight:700;text-decoration:none}
+.skip-link:focus{top:12px}
+
+.wrap{width:min(100% - 2*var(--gutter),1200px);margin-inline:auto}
+@media (max-width:359px){:root{--gutter:16px}}
+
+/* ---------- Icons ---------- */
+.icon{width:1.2em;height:1.2em;flex:none;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.icon-star{fill:currentColor;stroke:none}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:54px;padding:12px 26px;border-radius:8px;border:2px solid transparent;
+  font:600 17px/1.25 var(--font-body);text-align:center;text-decoration:none;cursor:pointer;
+  transition:background-color .15s ease,color .15s ease,border-color .15s ease;
+}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-primary:hover{background:var(--primary-dark);color:#fff}
+.btn-outline{background:transparent;color:var(--primary);border-color:var(--primary)}
+.btn-outline:hover{background:var(--primary);color:#fff}
+.on-dark .btn-primary{border-color:#fff}
+.on-dark .btn-primary:hover{background:#fff;color:var(--navy)}
+.on-dark .btn-outline{color:#fff;border-color:rgba(255,255,255,.85)}
+.on-dark .btn-outline:hover{background:#fff;color:var(--navy);border-color:#fff}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px}
+@media (max-width:539px){.btn-row .btn{width:100%}}
+.text-link-btn{background:none;border:0;padding:0;font:600 1em/1.5 var(--font-body);color:var(--primary);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.text-link-btn:hover{color:var(--primary-dark)}
+
+/* ---------- Header ---------- */
+.site-header{position:sticky;top:0;z-index:100;background:var(--navy);color:#fff;box-shadow:0 1px 0 rgba(255,255,255,.08)}
+.header-main{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.logo{display:inline-flex;align-items:center;color:#fff;text-decoration:none;flex:none}
+.logo img{height:44px;width:auto}
+.logo-fallback{font:600 20px/1.2 var(--font-head);color:#fff}
+.desktop-nav,.header-call{display:none}
+.mobile-book{min-height:48px;padding:8px 16px;white-space:nowrap;font-size:16px}
+@media (max-width:359px){.logo img{height:38px}.mobile-book{padding:8px 12px}}
+
+.mobile-explore{padding-bottom:12px}
+.explore-btn{
+  width:100%;min-height:48px;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.55);border-radius:8px;
+  padding:8px 16px;font:600 16px/1.2 var(--font-body);cursor:pointer;
+}
+.explore-btn .icon{transition:transform .15s ease}
+.explore-btn[aria-expanded="true"] .icon{transform:rotate(180deg)}
+.explore-menu{position:absolute;left:0;right:0;top:100%;background:#fff;border-top:1px solid var(--border);box-shadow:0 14px 28px rgba(5,28,59,.22)}
+.explore-menu[hidden]{display:none}
+.explore-menu a{display:flex;align-items:center;min-height:52px;padding:10px var(--gutter);color:var(--navy);font-weight:600;font-size:18px;text-decoration:none;border-bottom:1px solid var(--border)}
+.explore-menu a:hover{background:var(--cream)}
+.explore-menu :focus-visible{outline-color:var(--navy);box-shadow:none;outline-offset:-3px}
+
+@media (min-width:1100px){
+  .header-main{display:grid;grid-template-columns:auto 1fr auto;gap:32px;padding-block:12px;min-height:88px}
+  .logo img{height:62px}
+  .desktop-nav{display:block}
+  .desktop-nav ul{display:flex;justify-content:center;gap:clamp(20px,2.6vw,44px)}
+  .desktop-nav a{color:#fff;font-weight:600;font-size:17px;text-decoration:none;padding:8px 2px;display:inline-block}
+  .desktop-nav a:hover{color:#fff;text-decoration:underline;text-decoration-color:var(--peach);text-decoration-thickness:2px;text-underline-offset:8px}
+  .header-call{
+    display:inline-flex;align-items:center;gap:12px;background:var(--primary);color:#fff;text-decoration:none;
+    border:1px solid rgba(255,255,255,.45);border-radius:8px;padding:9px 20px;line-height:1.2;
+    transition:background-color .15s ease;
+  }
+  .header-call:hover{background:var(--primary-dark);color:#fff}
+  .header-call .hc-label{display:block;font-size:15px;font-weight:600}
+  .header-call .hc-num{display:block;font-size:19px;font-weight:700;letter-spacing:.02em}
+  .mobile-book,.mobile-explore,.explore-menu{display:none}
+}
+
+/* ---------- Sections ---------- */
+.sec{padding-block:var(--sec-y)}
+.sec--cream{background:var(--cream)}
+.sec--tight{padding-block:calc(var(--sec-y) * .65)}
+.sec--divided{border-top:1px solid var(--border)}
+.sec-head{max-width:780px;margin-bottom:40px}
+.sec-head h2{margin-bottom:16px}
+.sec-head--center{margin-inline:auto;text-align:center}
+
+/* Placeholders */
+.ph{position:relative;overflow:hidden;border-radius:16px;background:#f3dcc8;border:1px dashed #c39270}
+.ph img.ph-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph-icon{position:absolute;left:50%;top:44%;width:44px;height:44px;margin:-22px 0 0 -22px;color:#b3825e;stroke-width:1.5}
+.ph-label{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(255,255,255,.88);color:#5a3a22;font:600 13px/1.35 var(--font-body);padding:8px 10px;border-radius:8px}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:44px var(--sec-y)}
+.hero-grid{display:grid;gap:40px;align-items:center}
+.hero-copy h1{max-width:18em;margin-bottom:20px}
+.hero-copy .lead{max-width:36em;margin-bottom:28px}
+.hero-note{margin-top:16px;font-size:16px;color:var(--muted)}
+.rating-badge{display:inline-flex;align-items:center;flex-wrap:wrap;gap:6px 12px;margin-top:28px;padding:10px 16px;background:#fff;border:1px solid var(--border);border-radius:999px;color:var(--navy);text-decoration:none;font-size:16px}
+.rating-badge:hover{border-color:var(--primary);color:var(--navy)}
+.stars{display:inline-flex;gap:2px;color:var(--star)}
+.stars .icon{width:18px;height:18px}
+.hero-heritage{margin-top:16px;font-size:16px;color:var(--muted);max-width:34em}
+.hero-media .ph{aspect-ratio:5/4}
+@media (min-width:900px){
+  .hero{padding-block:72px var(--sec-y)}
+  .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:64px}
+}
+@media (min-width:1024px){.hero{padding-block:88px 96px}}
+
+/* ---------- Recognition ---------- */
+.moments{display:grid;gap:28px}
+.moment{border-top:1px solid var(--border);padding-top:22px}
+.moment .icon{width:30px;height:30px;color:var(--primary);margin-bottom:14px}
+.moment h3{font-size:clamp(1.25rem,1.15rem + .4vw,1.4375rem);margin-bottom:8px}
+.moment p{font-size:17px;color:var(--text)}
+.recog-close{max-width:780px;margin:44px auto 0;text-align:center}
+@media (min-width:800px){.moments{grid-template-columns:repeat(3,1fr);gap:40px}}
+
+/* ---------- Provider ---------- */
+.provider{display:grid;gap:28px;grid-template-areas:"head" "photo" "body"}
+.provider-head{grid-area:head}
+.provider-head h2{margin-bottom:16px}
+.provider-photo{grid-area:photo;aspect-ratio:3/4;width:100%;max-width:260px;align-self:start}
+.provider-body{grid-area:body;max-width:680px}
+.provider-body p+p{margin-top:16px}
+.provider-body .reviewers-say{padding-left:18px;border-left:4px solid var(--peach);font-weight:600;color:var(--navy)}
+.heritage{display:flex;flex-wrap:wrap;gap:18px 22px;align-items:flex-start;margin-top:32px;padding-top:26px;border-top:1px solid var(--border)}
+.heritage figure{flex:0 0 120px}
+.heritage .ph{aspect-ratio:15/16;border-radius:12px}
+.heritage .ph-label{font-size:11px;left:6px;right:6px;bottom:6px;padding:4px 6px}
+.heritage figcaption{margin-top:6px;font-size:14px;line-height:1.4;color:var(--muted)}
+.heritage-text{flex:1 1 240px}
+.heritage-text h3{font-size:1.25rem;margin-bottom:6px}
+.heritage-text p{font-size:17px}
+@media (min-width:900px){
+  .provider{grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:64px;row-gap:0;grid-template-areas:"photo head" "photo body";grid-template-rows:auto 1fr}
+  .provider-photo{max-width:none}
+}
+
+/* ---------- Reviews ---------- */
+.reviews-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px 32px;margin-bottom:36px}
+.reviews-head h2{max-width:640px}
+.rating-summary{display:flex;align-items:center;flex-wrap:wrap;gap:8px 14px;font-size:18px;color:var(--navy)}
+.rating-summary .stars .icon{width:22px;height:22px}
+.review-grid{display:grid;gap:24px}
+@media (min-width:900px){.review-grid{grid-template-columns:repeat(3,1fr)}}
+.review{display:flex;flex-direction:column;background:#fff;border:1px solid var(--border);border-radius:12px;padding:28px}
+@media (max-width:480px){.review{padding:22px}}
+.review-top{display:flex;align-items:center;gap:10px;margin-bottom:16px;font-size:16px;font-weight:600;color:var(--navy)}
+.review-body p{font-size:17px;line-height:1.65}
+.review-body p+p{margin-top:10px}
+.review-body.is-clamped{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden}
+.read-more{align-self:flex-start;margin-top:12px;background:none;border:0;padding:6px 0;min-height:44px;font:600 16px/1.2 var(--font-body);color:var(--primary);text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.read-more[hidden]{display:none}
+.review-by{margin-top:auto;padding-top:20px;font-size:16px;line-height:1.4}
+.review-by strong{display:block;color:var(--navy);font-size:17px}
+.review-by span{color:var(--muted)}
+.proof-actions{margin-top:36px;display:flex;flex-direction:column;align-items:center;gap:28px;text-align:center}
+.proof-actions .see-all{font-weight:700;font-size:18px}
+.proof-cta{max-width:560px;display:flex;flex-direction:column;align-items:center;gap:16px}
+.proof-cta p{color:var(--text)}
+
+/* ---------- Process ---------- */
+.steps{display:grid;gap:32px}
+.step{position:relative;padding-left:72px}
+.step-num{position:absolute;left:0;top:0;width:48px;height:48px;border-radius:50%;background:var(--peach);color:var(--navy);display:grid;place-items:center;font:600 22px/1 var(--font-head)}
+.step:not(:last-child)::before{content:"";position:absolute;left:23px;top:56px;bottom:-28px;width:2px;background:var(--peach)}
+.step h3{font-size:1.3125rem;margin-bottom:8px;padding-top:8px}
+.step p{font-size:17px}
+.steps-foot{margin-top:48px;display:flex;flex-direction:column;align-items:flex-start;gap:20px;max-width:760px}
+@media (max-width:1099px){.steps{max-width:760px}}
+@media (min-width:1100px){
+  .steps{grid-template-columns:repeat(4,1fr);gap:32px}
+  .step{padding-left:0;padding-top:72px}
+  .step h3{padding-top:0}
+  .step:not(:last-child)::before{left:60px;right:-32px;top:23px;bottom:auto;width:auto;height:2px}
+  .steps-foot{align-items:center;text-align:center;margin-inline:auto}
+}
+
+/* ---------- Benefits ---------- */
+.benefits-grid{display:grid;gap:40px;align-items:start}
+.benefits-media .ph{aspect-ratio:4/3}
+.benefit-list{display:grid}
+.benefit{padding-block:26px;border-top:1px solid #e6cdb9}
+.benefit:first-child{padding-top:0;border-top:0}
+.benefit h3{margin-bottom:10px}
+.benefit p{max-width:60ch}
+@media (min-width:960px){
+  .benefits-grid{grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:64px}
+  .benefits-media{position:sticky;top:calc(var(--header-h) + 24px)}
+}
+.pay-callout{margin-top:56px;background:#fff;border:1px solid #ecd2bd;border-left:8px solid var(--peach);border-radius:12px;padding:28px 28px 28px 26px;display:grid;gap:12px}
+.pay-callout p{max-width:70ch}
+@media (min-width:768px){.pay-callout{padding:36px 40px}}
+
+/* ---------- FAQ ---------- */
+.faq-wrap{max-width:760px;margin-inline:auto}
+.faq-list{border-top:1px solid var(--border)}
+.faq-item{border-bottom:1px solid var(--border)}
+.faq-item summary{
+  list-style:none;cursor:pointer;display:flex;align-items:flex-start;justify-content:space-between;gap:20px;
+  padding:22px 0;font:600 19px/1.4 var(--font-body);color:var(--navy);
+}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{
+  content:"";flex:none;width:24px;height:24px;margin-top:2px;
+  background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2312639a' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M12 5v14M5 12h14'/%3E%3C/svg%3E") center/contain no-repeat;
+}
+.faq-item[open] summary::after{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2312639a' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M5 12h14'/%3E%3C/svg%3E");
+}
+.faq-item summary:hover{color:var(--primary)}
+.faq-answer{padding:0 44px 24px 0}
+.faq-answer p{font-size:17px}
+.faq-more{margin-top:36px;padding:24px 26px;background:var(--cream);border-radius:12px}
+.faq-more p+p{margin-top:10px}
+
+/* ---------- Location ---------- */
+.loc-grid{display:grid;gap:36px;align-items:start}
+.map-frame{position:relative;aspect-ratio:4/3;min-height:280px;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#e9eef2}
+.map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-actions{margin-top:18px}
+.loc-info{display:grid;gap:18px;align-content:start}
+.loc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 26px}
+.loc-card address{font-size:19px;line-height:1.55;color:var(--navy)}
+.loc-card address strong{display:block;font-family:var(--font-head);font-size:1.3125rem;margin-bottom:4px}
+.loc-card p{margin-top:12px;font-size:17px}
+.loc-phone{font-weight:700;font-size:19px}
+.loc-info .ph{aspect-ratio:4/3}
+@media (min-width:900px){
+  .loc-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px}
+  .map-frame{aspect-ratio:16/10}
+}
+
+/* ---------- Final CTA ---------- */
+.final-cta{background:var(--navy);color:#fff;padding-block:var(--sec-y);text-align:center}
+.final-cta h2{color:#fff;max-width:20em;margin:0 auto 16px}
+.final-cta p{color:#e6edf5;max-width:36em;margin-inline:auto}
+.final-cta .btn-row{justify-content:center;margin-top:30px}
+.final-cta .fine{margin-top:20px;font-size:16px;color:#c9d6e4}
+.final-cta a:not(.btn){color:#fff}
+
+/* ---------- Footer ---------- */
+.site-footer{background:var(--navy);color:#dbe5f0;border-top:4px solid var(--peach);padding-block:48px 28px}
+.footer-grid{display:grid;gap:32px}
+.f-brand img{height:68px;width:auto;margin-bottom:14px}
+.f-title{font:700 17px/1.3 var(--font-body);color:#fff;margin-bottom:10px}
+.site-footer address{line-height:1.7;font-size:17px}
+.site-footer a{color:#fff;text-decoration-color:rgba(255,255,255,.5)}
+.site-footer a:hover{color:var(--peach)}
+.f-links li+li{margin-top:6px}
+.f-links a{display:inline-block;padding:4px 0;font-size:17px}
+.footer-legal{margin-top:36px;padding-top:22px;border-top:1px solid rgba(255,255,255,.18);display:grid;gap:10px;font-size:15px;color:#b9c8d9}
+@media (min-width:768px){.footer-grid{grid-template-columns:1.2fr 1fr 1fr;gap:48px}}
+@media (max-width:767px){.site-footer{padding-bottom:calc(28px + 72px + env(safe-area-inset-bottom,0px))}}
+
+/* ---------- Mobile sticky call bar ---------- */
+.call-bar{
+  position:fixed;left:0;right:0;bottom:0;z-index:90;display:flex;align-items:center;justify-content:center;gap:10px;
+  min-height:56px;padding:12px 20px calc(12px + env(safe-area-inset-bottom,0px));
+  background:var(--primary);color:#ffffff;text-decoration:none;font:700 18px/1.2 var(--font-body);
+  box-shadow:0 -2px 12px rgba(5,28,59,.18);
+}
+.call-bar:hover{background:var(--primary-dark);color:#fff}
+.call-bar:focus-visible{outline-color:#fff;box-shadow:inset 0 0 0 3px var(--navy);outline-offset:-6px}
+@media (min-width:768px){.call-bar{display:none}}
+
+/* ---------- Form dialog ---------- */
+html.modal-open{overflow:hidden}
+dialog.form-dialog{
+  border:0;padding:0;border-radius:16px;background:#fff;color:var(--text);
+  width:min(720px,calc(100vw - 24px));max-width:none;
+  max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px);overflow:hidden;
+  box-shadow:0 24px 64px rgba(5,28,59,.4);
+}
+dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
+.modal-card{display:flex;flex-direction:column;max-height:calc(100vh - 24px);max-height:calc(100dvh - 24px)}
+.modal-head{position:relative;padding:28px 72px 16px 28px;flex:none}
+.modal-head h2{font-size:clamp(1.5rem,1.3rem + 1vw,2rem);margin-bottom:8px}
+.modal-head p{font-size:16px;color:var(--text);max-width:36em}
+.modal-head p+p{margin-top:6px}
+.modal-close{
+  position:absolute;top:14px;right:14px;width:48px;height:48px;display:grid;place-items:center;
+  background:#fff;color:var(--navy);border:1.5px solid var(--control);border-radius:50%;cursor:pointer;
+}
+.modal-close:hover{background:var(--cream)}
+.modal-close .icon{width:24px;height:24px}
+.modal-body{overflow:auto;-webkit-overflow-scrolling:touch;overscroll-behavior:contain;padding:8px 24px 28px}
+.form-frame{height:882px}
+@media (max-width:539px){
+  .modal-head{padding:22px 64px 12px 18px}
+  .modal-body{padding:4px 12px 24px}
+}
+
+/* ---------- Reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{transition:none!important;animation:none!important}
+}
+</style>
+</head>
+<body>
+
+<!-- SVG sprite -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2.5l2.9 6.1 6.6.9-4.8 4.6 1.2 6.6L12 17.5l-5.9 3.2 1.2-6.6L2.5 9.5l6.6-.9z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+  <symbol id="i-close" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-tv" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="15" rx="2"/><path d="M17 2l-5 5-5-5"/></symbol>
+  <symbol id="i-nav" viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></symbol>
+  <symbol id="i-image" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<!-- ======================= HEADER ======================= -->
+<header class="site-header" id="site-header">
+  <div class="wrap header-main">
+    <a class="logo" href="https://brownhearingcenters.com/" aria-label="Brown Hearing Centers, visit our website">
+      <img src="https://media.audiologydesign.com/wp-content/uploads/sites/545/2022/06/30161344/Alt-Client-Logo.svg" alt="Brown Hearing Centers, since 1962" width="220" height="82" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+      <span class="logo-fallback" hidden>Brown Hearing Centers</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Page sections">
+      <ul>
+        <li><a href="#your-care">Your Care</a></li>
+        <li><a href="#what-to-expect">What to Expect</a></li>
+        <li><a href="#hearing-options">Hearing Options</a></li>
+        <li><a href="#faqs">FAQs</a></li>
+        <li><a href="#find-us">Find Us</a></li>
+      </ul>
+    </nav>
+
+    <a class="header-call" href="tel:4092078726">
+      <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
+      <span><span class="hc-label">Schedule an Appointment</span><span class="hc-num">409-207-8726</span></span>
+    </a>
+
+    <button type="button" class="btn btn-primary mobile-book" data-open-form aria-haspopup="dialog">Book Appointment</button>
+  </div>
+
+  <div class="wrap mobile-explore">
+    <button type="button" class="explore-btn" id="explore-btn" aria-expanded="false" aria-controls="explore-menu">
+      <span>Explore This Page</span>
+      <svg class="icon" aria-hidden="true"><use href="#i-chevron"/></svg>
+    </button>
+  </div>
+  <nav class="explore-menu" id="explore-menu" aria-label="Explore this page" hidden>
+    <a href="#your-care">Your Care</a>
+    <a href="#what-to-expect">What to Expect</a>
+    <a href="#hearing-options">Hearing Options</a>
+    <a href="#faqs">FAQs</a>
+    <a href="#find-us">Find Us</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ======================= 1. HERO ======================= -->
+<section class="sec sec--cream hero" aria-labelledby="hero-title">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1 id="hero-title">Hearing aid help in Victoria, TX, for easier everyday conversations</h1>
+      <p class="lead">Start with a free consultation at our Victoria office. We’ll help you understand your hearing, talk through hearing aid options that fit your life and budget, and support you as you adjust.</p>
+
+      <div class="btn-row">
+        <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Contact Us</button>
+        <a class="btn btn-outline" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+      </div>
+      <p class="hero-note">Request an appointment online or by phone. Family members are welcome to join you.</p>
+
+      <!-- Rating captured Oct 30, 2026 (Victoria Google profile). Recheck before launch. -->
+      <a class="rating-badge" href="#reviews" aria-label="4.9 out of 5 from 51 Google reviews. Jump to the reviews section.">
+        <span class="stars" aria-hidden="true">
+          <svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg>
+        </span>
+        <span><strong>4.9</strong> out of 5 from 51 Google reviews</span>
+      </a>
+      <p class="hero-heritage">Family owned since 1962. The company’s first office opened in Victoria.</p>
+    </div>
+
+    <div class="hero-media">
+      <!-- IMG-HERO-01: 5:4 landscape. Replace with approved lifestyle image. -->
+      <div class="ph" data-placeholder="IMG-HERO-01" aria-hidden="true">
+        <svg class="icon ph-icon"><use href="#i-image"/></svg>
+        <div class="ph-label">IMG-HERO-01 · 5:4 landscape · Lifestyle: adults in easy, relaxed conversation (illustrative, not patients)</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 2. RECOGNITION ======================= -->
+<section class="sec sec--tight" aria-labelledby="recog-title">
+  <div class="wrap">
+    <div class="sec-head sec-head--center" style="margin-bottom:36px">
+      <h2 id="recog-title">Does everyday listening feel like more work than it used to?</h2>
+    </div>
+    <div class="moments">
+      <div class="moment">
+        <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
+        <h3>You ask people to repeat themselves</h3>
+        <p>Or you laugh along without catching the joke, and lean on watching faces to keep up.</p>
+      </div>
+      <div class="moment">
+        <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
+        <h3>Busy places wear you out</h3>
+        <p>Restaurants and group conversations are hard to follow, so you may start avoiding them.</p>
+      </div>
+      <div class="moment">
+        <svg class="icon" aria-hidden="true"><use href="#i-tv"/></svg>
+        <h3>The TV is louder than anyone else likes</h3>
+        <p>Family mention the volume, or the doorbell and phone go unheard.</p>
+      </div>
+    </div>
+    <div class="recog-close">
+      <p class="lead">Hearing changes are often gradual, and the people around you may notice before you do. Looking into your hearing, whether for yourself or someone you care about, doesn’t mean you need a hearing aid. The first step is simply understanding where your hearing stands.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 3. LOCAL TRUST ======================= -->
+<div id="your-care">
+
+  <section class="sec sec--divided" id="specialist" aria-labelledby="provider-title">
+    <div class="wrap">
+      <div class="provider">
+        <div class="provider-head">
+          <h2 id="provider-title">Meet Nick Yendrey, Hearing Instrument Specialist</h2>
+          <p class="lead">Nick serves our Victoria office, where he helps adults and their families understand their hearing and explore hearing aid options.</p>
+        </div>
+
+        <!-- IMG-PROVIDER-01: 3:4 portrait. Client portrait (600x800) attempted; placeholder shows if it fails to load. -->
+        <figure class="ph provider-photo" data-placeholder="IMG-PROVIDER-01">
+          <svg class="icon ph-icon" aria-hidden="true"><use href="#i-image"/></svg>
+          <figcaption class="ph-label" aria-hidden="true">IMG-PROVIDER-01 · 3:4 portrait · Nick Yendrey headshot</figcaption>
+          <img class="ph-img" src="https://media.audiologydesign.com/wp-content/uploads/sites/545/2024/08/16173756/Nick-Yendrey-600x800.jpeg" alt="Nick Yendrey, Hearing Instrument Specialist at the Victoria office" width="600" height="800" loading="lazy" onerror="this.remove()">
+        </figure>
+
+        <div class="provider-body">
+          <p>Brown Hearing Centers’ Hearing Instrument Specialists are state licensed. They test hearing to find out whether hearing aids may help, fit and program the devices, and guide patients and their families through the adjustment.</p>
+          <p class="reviewers-say">Victoria reviewers mention his patience, clear explanations and help getting started with new hearing aids.</p>
+
+          <div class="heritage">
+            <figure>
+              <!-- IMG-HERITAGE-01: ~15:16 portrait, small. Archival c. 1966 sign photo attempted (RESEARCH.md section 9). -->
+              <div class="ph" data-placeholder="IMG-HERITAGE-01">
+                <div class="ph-label" aria-hidden="true">IMG-HERITAGE-01 · 15:16 · 1966 sign photo</div>
+                <img class="ph-img" src="https://media.audiologydesign.com/wp-content/uploads/sites/545/2024/03/14134224/PICTURE-1-960x1024.jpg" alt="The founder’s father painting an early company office sign, c. 1966" width="960" height="1024" loading="lazy" onerror="this.remove()">
+              </div>
+              <figcaption>The founder’s father painting an early office sign, c. 1966</figcaption>
+            </figure>
+            <div class="heritage-text">
+              <h3>Family owned since 1962</h3>
+              <p>Brown Hearing Centers opened its first office in Victoria in 1962. Three generations later, it is still family owned and operated.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec sec--cream" id="reviews" aria-labelledby="reviews-title">
+    <div class="wrap">
+      <div class="reviews-head">
+        <h2 id="reviews-title">What patients at our Victoria office say on Google</h2>
+        <div class="rating-summary">
+          <span class="stars" aria-hidden="true">
+            <svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg>
+          </span>
+          <span><strong>4.9</strong> out of 5 from 51 Google reviews</span>
+        </div>
+      </div>
+
+      <!-- Reviews are verbatim from RESEARCH.md section 7A (R3, R4, R2). Max 3 shown on desktop and mobile by default. -->
+      <div class="review-grid">
+        <article class="review">
+          <div class="review-top">
+            <span class="stars" aria-hidden="true"><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg></span>
+            <span>5 out of 5</span>
+          </div>
+          <div class="review-body" id="rv-1">
+            <p>So very helpful with getting me started with my first time hearing aids. Nick Yendrey was kind, friendly, very knowledgeable &amp; helpful. Very pleasant helping me to get my new hearing aides on &amp; working &amp; even connected to my phone.</p>
+          </div>
+          <button type="button" class="read-more" aria-expanded="false" aria-controls="rv-1" hidden>Read more</button>
+          <p class="review-by"><strong>Pam Herrmann</strong><span>Google review</span></p>
+        </article>
+
+        <article class="review">
+          <div class="review-top">
+            <span class="stars" aria-hidden="true"><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg></span>
+            <span>5 out of 5</span>
+          </div>
+          <div class="review-body" id="rv-2">
+            <p>I had a very good experience. Nicholas answered all my questions. He made sure I could put the hearing aids on and operate them. He's a very pleasant person to talk to. I highly recommend him.</p>
+          </div>
+          <button type="button" class="read-more" aria-expanded="false" aria-controls="rv-2" hidden>Read more</button>
+          <p class="review-by"><strong>James Frenzel</strong><span>Google review</span></p>
+        </article>
+
+        <article class="review">
+          <div class="review-top">
+            <span class="stars" aria-hidden="true"><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg></span>
+            <span>5 out of 5</span>
+          </div>
+          <div class="review-body" id="rv-3">
+            <p>Nick was very polite and helpful. He made sure I was comfortable in the waiting room while he finished with his other patient.</p>
+            <p>He took his time with me during my visit. He made sure all my questions were answered and that I understood everything that was happening.</p>
+            <p>I would recommend Brown Hearing Centers.</p>
+            <p>Thank you Nick for your help.</p>
+          </div>
+          <button type="button" class="read-more" aria-expanded="false" aria-controls="rv-3" hidden>Read more</button>
+          <p class="review-by"><strong>Mike Keigley</strong><span>Google review</span></p>
+        </article>
+      </div>
+
+      <div class="proof-actions">
+        <a class="see-all" href="https://www.google.com/search?q=brown+hearing+centers+victoria+tx&amp;sca_esv=34388a73116c39a8&amp;rlz=1C1CHBD_enIN1092IN1158&amp;sxsrf=AKL5yDgwk-ihNlVEgp5WbUIXzOlfVx3UMw%3A1793298643906&amp;ei=05Djar7yNvSz4-EPltfoqAg&amp;biw=1920&amp;bih=953&amp;oq=brown+hearing+centers+victo&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiG2Jyb3duIGhlYXJpbmcgY2VudGVycyB2aWN0byoGCAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzIFEAAY7wUyBRAAGO8FMgUQABjvBUjMMlCuDVjMI3ABeAGQAQCYAa0BoAHiB6oBAzAuNrABALgBAcgBAPgBAZgCB6ACpAnCAgoQABhHGNYEGLADwgIFEAAYgASYAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKIBgGQBgSSBwUxLjUuMaAH_ieyBwUwLjUuMbgHhgnCBwMzLTfIB0qACAE&amp;sclient=gws-wiz-serp#lrd=0x864267d4e652ab67:0x3103d1a3a7112a8c,1,,,," target="_blank" rel="noopener noreferrer">See all our Google reviews<span class="visually-hidden"> (opens in a new tab)</span></a>
+
+        <div class="proof-cta">
+          <p>Ready to meet Nick? Request an appointment at our Victoria office, and bring a family member if you’d like.</p>
+          <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Contact Us</button>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ======================= 4. PROCESS ======================= -->
+<section class="sec" id="what-to-expect" aria-labelledby="process-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="process-title">From understanding your hearing to ongoing support</h2>
+      <p class="lead">Assessment comes first. Hearing aids enter the conversation only if they’re right for you.</p>
+    </div>
+
+    <ol class="steps">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <h3><span class="visually-hidden">Step 1: </span>Understand your hearing</h3>
+        <p>A hearing evaluation is a series of tests, including how well you detect and understand speech, so you know where things stand. Plan for up to an hour plus time to talk through the results. Bring a family member if you’d like. Hearing loss affects the people around you too.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <h3><span class="visually-hidden">Step 2: </span>Talk through options that fit you</h3>
+        <p>If hearing aids may help, your specialist explains which sounds are hardest for you and how devices could help. Options are matched to your hearing, lifestyle and budget, and the final choice is yours.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <h3><span class="visually-hidden">Step 3: </span>Get fitted and learn to use them</h3>
+        <p>Your hearing aids are programmed to your hearing prescription. You practice putting them in and taking them out, charging or changing batteries, and cleaning them. Fitting appointments generally take at least an hour, and written instructions are available on request.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">4</span>
+        <h3><span class="visually-hidden">Step 4: </span>Adjust and stay supported</h3>
+        <p>Getting used to new sounds takes time, and fine-tuning can take a few appointments. Regular cleanings and check-ins continue after that. Lifetime device programming is among the complimentary services Brown lists, so ask what’s included.</p>
+      </li>
+    </ol>
+
+    <div class="steps-foot">
+      <p class="small">Every visit is different. Timing varies, and some people need more than one adjustment appointment.</p>
+      <p>Step one can be a free consultation. Request an appointment and we’ll take it from there.</p>
+      <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Contact Us</button>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 5. PRACTICAL BENEFITS ======================= -->
+<section class="sec sec--cream" id="hearing-options" aria-labelledby="options-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="options-title">Hearing aid options that fit the way you live</h2>
+      <p class="lead">Hearing aids aren’t one-size-fits-all. Your specialist helps you weigh options against your hearing, your routine and your budget, then teaches you to use them with confidence.</p>
+    </div>
+
+    <div class="benefits-grid">
+      <div class="benefits-media">
+        <!-- IMG-PRODUCT-01: 4:3. Verified Signia/Starkey product render(s); confirm usage rights and model context. -->
+        <div class="ph" data-placeholder="IMG-PRODUCT-01" aria-hidden="true">
+          <svg class="icon ph-icon"><use href="#i-image"/></svg>
+          <div class="ph-label">IMG-PRODUCT-01 · 4:3 landscape · Selective product visual (Signia or Starkey render, labeled as an example)</div>
+        </div>
+      </div>
+
+      <div class="benefit-list">
+        <div class="benefit">
+          <h3>Chosen for your hearing, lifestyle and budget</h3>
+          <p>Your specialist considers how much you hear, what your days look like (church, family meals, hobbies, work) and what you want to spend. You can compare options that make sense for you, and the choice stays yours. Not everyone needs hearing aids, which is why testing comes first.</p>
+        </div>
+        <div class="benefit">
+          <h3>Features that can make everyday use simpler</h3>
+          <p>Depending on the model, hearing aids may be rechargeable, connect by Bluetooth to a compatible phone for calls and streaming, or come in discreet styles that sit mostly out of sight. Brown carries Signia and Starkey hearing aids. Features, styles and phone compatibility vary by model, and the smallest styles suit mild to moderate hearing loss.</p>
+        </div>
+        <div class="benefit">
+          <h3>Hands-on help learning your hearing aids</h3>
+          <p>Your fitting includes learning to put them in and take them out, charge or change batteries, and keep them clean. Settings can be fine-tuned at follow-up visits as you get used to new sounds. That practice and follow-up can help new hearing aids feel more natural over time.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pay-callout">
+      <h3>Cost matters, so we talk about it early</h3>
+      <p>Our pricing is all-inclusive, and we’re happy to walk through exactly what that covers for the hearing aids you’re considering. Financing is available through CareCredit and Cherry, subject to each provider’s terms and approval.</p>
+      <p><button type="button" class="text-link-btn" data-open-form aria-haspopup="dialog">Ask about costs and payment options</button></p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 6. FAQ ======================= -->
+<section class="sec" id="faqs" aria-labelledby="faq-title">
+  <div class="wrap">
+    <div class="faq-wrap">
+      <div class="sec-head" style="margin-bottom:32px">
+        <h2 id="faq-title">What else would you like to know before you reach out?</h2>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Is the consultation free?</summary>
+          <div class="faq-answer"><p>Yes, you can start with a free consultation. Brown’s complimentary services include one-on-one consultations, otoscopic examinations and hearing screenings. A complete hearing evaluation is a separate service, so ask us what your first visit will include and whether any costs apply.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>What happens at a hearing evaluation, and can someone come with me?</summary>
+          <div class="faq-answer"><p>A hearing evaluation is a series of tests, including how well you detect and understand speech. Your specialist explains the results and, if hearing aids may help, goes over your options. Plan on up to an hour plus time to talk. Bringing a family member is encouraged, because hearing loss affects the people around you too.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How much do hearing aids cost, and are payment options available?</summary>
+          <div class="faq-answer"><p>Cost depends mainly on the technology level and features you choose, not on the style. Prices aren’t listed here because the right option depends on your hearing, lifestyle and budget. Our pricing is all-inclusive, so ask us what it covers. CareCredit and Cherry financing are available, subject to approval. Have a coverage question? Ask us when you call or request an appointment.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>How do I know which hearing aid style is right for me?</summary>
+          <div class="faq-answer"><p>The right style depends on your type and degree of hearing loss, dexterity and vision, ear anatomy, lifestyle, appearance preferences and budget. Some of the smallest styles suit mild to moderate hearing loss, while others work across a wider range. Your specialist will explain what fits, and why.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Will I get help learning to use and adjust to my hearing aids?</summary>
+          <div class="faq-answer"><p>Yes. At your fitting, your specialist programs the devices and shows you how to put them in, take them out, charge or change batteries and clean them. Adjusting to new sounds takes time and may take a few follow-up appointments. Written instructions are available on request, and regular cleanings and check-ins are part of ongoing care.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>Can you help with hearing aids I bought somewhere else?</summary>
+          <div class="faq-answer"><p>Brown repairs and services hearing aids from most major manufacturers, including some it didn’t fit. Contact us with the brand and what’s going wrong, and we’ll tell you what can be done. Out-of-warranty repairs may involve a small fee, and we can’t promise every device is repairable.</p></div>
+        </details>
+      </div>
+
+      <div class="faq-more">
+        <p><strong>Still have a question?</strong></p>
+        <p>Call <a href="tel:4092078726">409-207-8726</a> or <button type="button" class="text-link-btn" data-open-form aria-haspopup="dialog">request an appointment</button> and ask us directly.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= 7. LOCATION + FINAL CTA ======================= -->
+<section class="sec sec--cream" id="find-us" aria-labelledby="loc-title">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 id="loc-title">Find our Victoria office</h2>
+      <p class="lead">We’re inside the Heritage Mark building on N. Navarro Street. Request an appointment online or call us to plan your visit.</p>
+    </div>
+
+    <div class="loc-grid">
+      <div>
+        <div class="map-frame">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.707081354659!2d-96.9979563!3d28.8475796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864267d4e652ab67%3A0x3103d1a3a7112a8c!2sBrown%20Hearing%20Centers!5e0!3m2!1sen!2sin!4v1793300943437!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Map showing Brown Hearing Centers, 5606 N. Navarro Street, Suite 200, Victoria, TX"></iframe>
+        </div>
+        <div class="map-actions">
+          <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=5606+N+Navarro+St+Suite+200+Victoria+TX+77904" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-nav"/></svg>Get Directions<span class="visually-hidden"> (opens in a new tab)</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="loc-info">
+        <div class="loc-card">
+          <address>
+            <strong>Brown Hearing Centers, Victoria Office</strong>
+            5606 N. Navarro Street, Suite 200<br>
+            Victoria, TX 77904
+          </address>
+          <p>Located inside the Heritage Mark building.</p>
+          <p class="loc-phone"><a href="tel:4092078726">409-207-8726</a></p>
+        </div>
+        <!-- IMG-CLINIC-01: 4:3. Real Victoria office photo (exterior or waiting room). Requested from client (Awaiting_Client.md #4). Never substitute another branch. -->
+        <div class="ph" data-placeholder="IMG-CLINIC-01" aria-hidden="true">
+          <svg class="icon ph-icon"><use href="#i-image"/></svg>
+          <div class="ph-label">IMG-CLINIC-01 · 4:3 landscape · Authentic Victoria office exterior or waiting room (awaiting client photos)</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta on-dark" aria-labelledby="final-title">
+  <div class="wrap">
+    <h2 id="final-title">Take the first step toward easier conversations</h2>
+    <p class="lead">Request an appointment at our Victoria office. Tell us what you’ve been noticing and the best way to reach you.</p>
+    <div class="btn-row">
+      <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Contact Us</button>
+      <a class="btn btn-outline" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+    </div>
+    <p class="fine">Start with a free consultation, and feel free to bring a family member.</p>
+  </div>
+</section>
+
+</main>
+
+<!-- ======================= FOOTER ======================= -->
+<footer class="site-footer on-dark">
+  <div class="wrap footer-grid">
+    <div class="f-brand">
+      <a href="https://brownhearingcenters.com/" aria-label="Brown Hearing Centers, visit our website">
+        <img src="https://media.audiologydesign.com/wp-content/uploads/sites/545/2022/06/30161349/Client-Logo.svg" alt="Brown Hearing Centers, since 1962" width="220" height="82" loading="lazy" onerror="this.hidden=true;this.nextElementSibling.hidden=false">
+        <span class="logo-fallback" hidden>Brown Hearing Centers</span>
+      </a>
+      <p>Family owned since 1962.</p>
+    </div>
+    <div>
+      <p class="f-title">Victoria Office</p>
+      <address>
+        5606 N. Navarro Street, Suite 200<br>
+        Victoria, TX 77904<br>
+        <a href="tel:4092078726">409-207-8726</a>
+      </address>
+    </div>
+    <div>
+      <p class="f-title">More from Brown</p>
+      <ul class="f-links">
+        <li><a href="https://brownhearingcenters.com/" target="_blank" rel="noopener noreferrer">Visit Our Website</a></li>
+        <!-- Candidate privacy URL from RESEARCH.md S29; confirm whether a campaign-specific policy is needed. -->
+        <li><a href="https://brownhearingcenters.com/privacy-policy/" target="_blank" rel="noopener noreferrer">Privacy Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-legal">
+    <p>The information on this page is general and is not medical advice. If you suspect a hearing problem, consult a qualified physician or hearing professional.</p>
+    <p>&copy; <span id="year">2026</span> {{location.name}} | All rights reserved.</p>
+  </div>
+</footer>
+
+<!-- Mobile sticky call bar -->
+<a class="call-bar" href="tel:4092078726" aria-label="Call 409-207-8726">
+  <svg class="icon" aria-hidden="true" style="width:24px;height:24px"><use href="#i-phone"/></svg>
+  <span>Call</span>
+</a>
+
+<!-- ======================= FORM DIALOG ======================= -->
+<dialog class="form-dialog" id="form-dialog" aria-labelledby="form-title">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h2 id="form-title">Request an Appointment</h2>
+      <p>Send your details and what you’d like help with. This form submits an appointment request to our Victoria office.</p>
+      <p>Prefer to talk? Call <a href="tel:4092078726"><strong>409-207-8726</strong></a>.</p>
+      <button type="button" class="modal-close" id="form-close" aria-label="Close appointment request form">
+        <svg class="icon" aria-hidden="true"><use href="#i-close"/></svg>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="form-frame">
+        <iframe
+          src="https://api.onspirepulse.com/widget/form/cBoMUN0TEcUMDLik7PTE"
+          style="width:100%;height:100%;border:none;border-radius:8px"
+          id="formEmbed-cBoMUN0TEcUMDLik7PTE"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="Form 0"
+          data-height="882"
+          data-layout-iframe-id="formEmbed-cBoMUN0TEcUMDLik7PTE"
+          data-form-id="cBoMUN0TEcUMDLik7PTE"
+          data-cookie-consent="true"
+          data-cookie-consent-provider="auto"
+          title="Form 0"
+        ></iframe>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script src="https://api.onspirepulse.com/js/form_embed.js"></script>
+<script>
+(function () {
+  var doc = document, root = doc.documentElement;
+
+  /* Current year */
+  var y = doc.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
+
+  /* Header height -> scroll offset */
+  var header = doc.getElementById('site-header');
+  function setHeaderH() { root.style.setProperty('--header-h', header.offsetHeight + 'px'); }
+  setHeaderH();
+  window.addEventListener('resize', setHeaderH);
+  if (window.ResizeObserver) new ResizeObserver(setHeaderH).observe(header);
+
+  /* Mobile "Explore This Page" menu */
+  var exploreBtn = doc.getElementById('explore-btn');
+  var exploreMenu = doc.getElementById('explore-menu');
+  function closeMenu() { exploreMenu.hidden = true; exploreBtn.setAttribute('aria-expanded', 'false'); }
+  function openMenu() { exploreMenu.hidden = false; exploreBtn.setAttribute('aria-expanded', 'true'); }
+  exploreBtn.addEventListener('click', function () {
+    exploreBtn.getAttribute('aria-expanded') === 'true' ? closeMenu() : openMenu();
+  });
+  exploreMenu.addEventListener('click', function (e) { if (e.target.closest('a')) closeMenu(); });
+  doc.addEventListener('click', function (e) {
+    if (!exploreMenu.hidden && !e.target.closest('#explore-menu') && !e.target.closest('#explore-btn')) closeMenu();
+  });
+  doc.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !exploreMenu.hidden) { closeMenu(); exploreBtn.focus(); }
+  });
+  window.matchMedia('(min-width:1100px)').addEventListener('change', function (m) { if (m.matches) closeMenu(); });
+
+  /* Appointment form dialog (single modal for every trigger) */
+  var dlg = doc.getElementById('form-dialog');
+  var closeBtn = doc.getElementById('form-close');
+  function openForm(e) {
+    if (e) e.preventDefault();
+    closeMenu();
+    if (typeof dlg.showModal === 'function') { dlg.showModal(); } else { dlg.setAttribute('open', ''); }
+    root.classList.add('modal-open');
+  }
+  function closeForm() {
+    if (typeof dlg.close === 'function') { dlg.close(); } else { dlg.removeAttribute('open'); }
+    root.classList.remove('modal-open');
+  }
+  [].forEach.call(doc.querySelectorAll('[data-open-form]'), function (el) { el.addEventListener('click', openForm); });
+  closeBtn.addEventListener('click', closeForm);
+  dlg.addEventListener('close', function () { root.classList.remove('modal-open'); });
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) closeForm(); });
+
+  /* Review "Read more" (fail-open: full text shows if JS is unavailable) */
+  var cards = [].slice.call(doc.querySelectorAll('.review'));
+  function measure() {
+    cards.forEach(function (card) {
+      var body = card.querySelector('.review-body');
+      var btn = card.querySelector('.read-more');
+      if (btn.getAttribute('aria-expanded') === 'true') return;
+      body.classList.add('is-clamped');
+      var overflows = body.scrollHeight > body.clientHeight + 1;
+      btn.hidden = !overflows;
+      if (!overflows) body.classList.remove('is-clamped');
+    });
+  }
+  cards.forEach(function (card) {
+    var body = card.querySelector('.review-body');
+    var btn = card.querySelector('.read-more');
+    btn.addEventListener('click', function () {
+      var expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      btn.textContent = expanded ? 'Read more' : 'Show less';
+      body.classList.toggle('is-clamped', expanded);
+    });
+  });
+  measure();
+  if (doc.fonts && doc.fonts.ready) doc.fonts.ready.then(measure);
+  var t;
+  window.addEventListener('resize', function () { clearTimeout(t); t = setTimeout(measure, 150); });
+})();
+</script>
+</body>
+</html>
