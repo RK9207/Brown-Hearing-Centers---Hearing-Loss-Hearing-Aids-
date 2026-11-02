@@ -403,19 +403,19 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 .faq-more p+p{margin-top:10px}
 
 /* ---------- Location ---------- */
-.loc-grid{display:grid;gap:36px;align-items:start}
+.loc-grid{display:grid;grid-template-areas:"info" "map";gap:28px;align-items:start}
+.loc-map{grid-area:map;min-width:0}
 .map-frame{position:relative;aspect-ratio:4/3;min-height:280px;border-radius:12px;overflow:hidden;border:1px solid var(--border);background:#e9eef2}
 .map-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 .map-actions{margin-top:18px}
-.loc-info{display:grid;gap:18px;align-content:start}
+.loc-info{grid-area:info;min-width:0}
 .loc-card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 26px}
 .loc-card address{font-size:19px;line-height:1.55;color:var(--navy)}
 .loc-card address strong{display:block;font-family:var(--font-head);font-size:1.3125rem;margin-bottom:4px}
 .loc-card p{margin-top:12px;font-size:17px}
 .loc-phone{font-weight:700;font-size:19px}
-.loc-info .ph{aspect-ratio:4/3}
 @media (min-width:900px){
-  .loc-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:48px}
+  .loc-grid{grid-template-columns:minmax(0,7fr) minmax(0,5fr);grid-template-areas:"map info";gap:36px}
   .map-frame{aspect-ratio:16/10}
 }
 
@@ -878,11 +878,23 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
   <div class="wrap">
     <div class="sec-head">
       <h2 id="loc-title">Find our Victoria office</h2>
-      <p class="lead">We’re inside the Heritage Mark building on N. Navarro Street. Request an appointment online or call us to plan your visit.</p>
+      <p class="lead">Visit us inside the Heritage Mark building on N. Navarro Street, Suite 200.</p>
     </div>
 
     <div class="loc-grid">
-      <div>
+      <div class="loc-info">
+        <div class="loc-card">
+          <address>
+            <strong>Brown Hearing Centers — Victoria Office</strong>
+            5606 N. Navarro Street, Suite 200<br>
+            Victoria, TX 77904
+          </address>
+          <p class="loc-phone">Planning your visit? Call <a href="tel:4092078726">409-207-8726</a>.</p>
+        </div>
+        <!-- IMG-CLINIC-01: Authentic Victoria office photo remains requested (Awaiting_Client.md #4). Placeholder removed with approval; add a verified photo only after review. -->
+      </div>
+
+      <div class="loc-map">
         <div class="map-frame">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.707081354659!2d-96.9979563!3d28.8475796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864267d4e652ab67%3A0x3103d1a3a7112a8c!2sBrown%20Hearing%20Centers!5e0!3m2!1sen!2sin!4v1793300943437!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Map showing Brown Hearing Centers, 5606 N. Navarro Street, Suite 200, Victoria, TX"></iframe>
         </div>
@@ -890,23 +902,6 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
           <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=5606+N+Navarro+St+Suite+200+Victoria+TX+77904" target="_blank" rel="noopener noreferrer">
             <svg class="icon" aria-hidden="true"><use href="#i-nav"/></svg>Get Directions<span class="visually-hidden"> (opens in a new tab)</span>
           </a>
-        </div>
-      </div>
-
-      <div class="loc-info">
-        <div class="loc-card">
-          <address>
-            <strong>Brown Hearing Centers, Victoria Office</strong>
-            5606 N. Navarro Street, Suite 200<br>
-            Victoria, TX 77904
-          </address>
-          <p>Located inside the Heritage Mark building.</p>
-          <p class="loc-phone"><a href="tel:4092078726">409-207-8726</a></p>
-        </div>
-        <!-- IMG-CLINIC-01: 4:3. Real Victoria office photo (exterior or waiting room). Requested from client (Awaiting_Client.md #4). Never substitute another branch. -->
-        <div class="ph" data-placeholder="IMG-CLINIC-01" aria-hidden="true">
-          <svg class="icon ph-icon"><use href="#i-image"/></svg>
-          <div class="ph-label">IMG-CLINIC-01 · 4:3 landscape · Authentic Victoria office exterior or waiting room (awaiting client photos)</div>
         </div>
       </div>
     </div>
