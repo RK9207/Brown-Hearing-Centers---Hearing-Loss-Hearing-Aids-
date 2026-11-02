@@ -484,6 +484,23 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
   *,*::before,*::after{transition:none!important;animation:none!important}
 }
 </style>
+<link href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" rel="stylesheet">
+<style>
+/* OAP map */
+#find-us .map-container{position:relative;margin-bottom:24px}
+#find-us .map-container p,#find-us .map-container a{font-size:15px;line-height:1.5;margin:0}
+#find-us .map-card{position:absolute;top:12px;left:12px;background:#fff;padding:12px 14px;border-radius:6px;box-shadow:0 1px 4px rgba(0,0,0,.15)}
+#find-us .map-card p{margin-bottom:8px}
+#find-us .map-card a{display:inline-block;color:#1a73e8;text-decoration:none;font-weight:600;padding:6px 0;min-height:24px}
+#find-us .map-card a:hover,#find-us .map-card a:focus{text-decoration:underline}
+#find-us .maplibregl-popup-content{padding:10px 14px;font-size:14px;line-height:1.4}
+#find-us .maplibregl-popup-close-button{padding:4px 8px;color:#000;font-size:18px}
+#find-us .maplibregl-popup-close-button:hover{color:#000;background:rgba(0,0,0,.05)}
+@media(max-width:600px){
+  #find-us .map-container p,#find-us .map-container a{font-size:14px}
+  #find-us .map-card{top:8px;left:8px;right:8px;max-width:calc(100% - 16px);padding:10px 12px}
+}
+</style>
 </head>
 <body>
 
@@ -895,8 +912,14 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       </div>
 
       <div class="loc-map">
-        <div class="map-frame">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3494.707081354659!2d-96.9979563!3d28.8475796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864267d4e652ab67%3A0x3103d1a3a7112a8c!2sBrown%20Hearing%20Centers!5e0!3m2!1sen!2sin!4v1793300943437!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Map showing Brown Hearing Centers, 5606 N. Navarro Street, Suite 200, Victoria, TX"></iframe>
+        <div class="map-container">
+          <div id="location-victoria-map" style="width:100%;height:350px;" role="region" aria-label="Map showing Brown Hearing Centers in Victoria"></div>
+          <div class="map-card">
+            <div>
+              <p><strong>Brown Hearing Centers</strong><br>5606 N. Navarro Street, Suite 200,<br>Victoria, TX 77904</p>
+              <a aria-label="Get directions to this location on Google Maps." target="_blank" href="https://www.google.com/maps/place/Brown+Hearing+Centers/@28.8475796,-96.9979563,17z/data=!3m1!4b1!4m6!3m5!1s0x864267d4e652ab67:0x3103d1a3a7112a8c!8m2!3d28.8475796!4d-96.9979563!16s%2Fg%2F11vr9tkh69?entry=ttu&amp;g_ep=EgoyMDI2MTAyOC4wIKXMDSoASAFQAw%3D%3D" rel="noopener">Directions</a>
+            </div>
+          </div>
         </div>
         <div class="map-actions">
           <a class="btn btn-outline" href="https://www.google.com/maps/dir/?api=1&amp;destination=5606+N+Navarro+St+Suite+200+Victoria+TX+77904" target="_blank" rel="noopener noreferrer">
@@ -1068,6 +1091,36 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     });
   });
 })();
+</script>
+
+<script src="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.js"></script>
+<script src="https://cdn.onspireanalytics.com/latest/maps.min.js"></script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    OapMaps.init({ proxyUrl: "https://oap-prod-maps-proxy-rakvtqapla-ue.a.run.app" });
+    var locations = [
+      {
+        id: "location-victoria-map",
+        center: [-96.99800994417896, 28.847781645088972],
+        label: "Brown Hearing Centers, Victoria, TX"
+      }
+    ];
+    locations.forEach(function (loc) {
+      if (!document.getElementById(loc.id)) return;
+      var map = new maplibregl.Map(Object.assign(
+        OapMaps.mapOptions(loc.id),
+        { center: loc.center, zoom: 13, cooperativeGestures: true }
+      ));
+      map.addControl(new maplibregl.NavigationControl(), "bottom-right");
+      new maplibregl.Marker({ color: "#EA4335" })
+        .setLngLat(loc.center)
+        .setPopup(new maplibregl.Popup({ offset: 25 }).setHTML(
+          "<div><strong>" + loc.label + "</strong></div>"
+        ))
+        .addTo(map);
+      OapMaps.initTracking(map);
+    });
+  });
 </script>
 </body>
 </html>
