@@ -407,14 +407,15 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 #hearing-options .sec-head h2{max-width:none}
 #hearing-options .lead{color:var(--navy)}
 .aid-style-grid{display:grid;gap:20px}
-.aid-style{min-width:0;display:grid;grid-template-columns:120px minmax(0,1fr);background:#fff;border:1px solid #dec7b5;border-radius:16px;overflow:hidden}
-.aid-style-visual{display:grid;place-items:center;background:#fae9db;border-right:1px solid #ead8c8;padding:12px}
-.aid-style-visual img{display:block;width:100%;max-width:180px;height:auto;object-fit:contain}
-.aid-style-copy{padding:24px}
-.aid-style-abbr{display:inline-block;color:#704529;font-size:14px;line-height:1.4;font-weight:700;letter-spacing:.06em;margin-bottom:8px}
+.aid-style{position:relative;min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid #dec7b5;border-radius:16px;overflow:hidden}
+.aid-style-visual{display:grid;place-items:center;flex:none;height:184px;padding:12px;background:#fffaf6;border-bottom:1px solid #ead8c8}
+.aid-style-visual img{display:block;width:160px;height:160px;max-width:calc(100% - 32px);object-fit:contain;object-position:center}
+.aid-style-copy{display:flex;flex-direction:column;flex:1;padding:22px 24px}
+.aid-style-abbr{position:absolute;top:16px;left:18px;padding:5px 8px;border:1px solid #dec7b5;border-radius:6px;background:#fff;color:#704529;font-size:14px;line-height:1.4;font-weight:700;letter-spacing:.04em}
 .aid-style h3{font-size:24px;line-height:1.3;margin-bottom:12px}
 .aid-style p{font-size:17px;line-height:1.6;color:var(--navy)}
-.aid-style .aid-style-consideration{margin-top:12px;padding-top:12px;border-top:1px solid #ead8c8;font-size:16px;color:#704529}
+.aid-style-copy>p:not(.aid-style-consideration){margin-bottom:14px}
+.aid-style .aid-style-consideration{margin-top:auto;padding-top:12px;border-top:1px solid #ead8c8;font-size:16px;color:#704529}
 .aid-illustration-note{margin-top:14px;font-size:16px;line-height:1.5;color:#704529}
 .aid-selection-note{display:grid;gap:12px;margin-top:24px;padding:22px 0;border-bottom:1px solid #d6b69c}
 .aid-selection-note h3,.aid-brand-row h3,.aid-feature-section>h3{font-size:25px;line-height:1.35}
@@ -433,9 +434,9 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 .aid-feature-grid p{font-size:17px;line-height:1.6;color:var(--navy)}
 .aid-feature-note{margin-top:24px;font-size:16px;line-height:1.5;color:#704529}
 .aid-options-action{display:flex;justify-content:center;margin-top:24px}
-@media(min-width:700px){.aid-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.aid-style{grid-template-columns:96px minmax(0,1fr)}}
-@media(min-width:1100px){.aid-style-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.aid-style{grid-template-columns:96px minmax(0,1fr)}.aid-style-copy{padding:20px 18px}.aid-style h3{font-size:22px}.aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.aid-selection-note{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px}.aid-detail-panel{padding:32px}}
-@media(max-width:599px){.aid-style{grid-template-columns:90px minmax(0,1fr)}.aid-style-visual{padding:8px;align-items:start}.aid-style-visual img{margin-top:18px}.aid-style-copy{padding:20px 16px}.aid-style h3{font-size:21px}.aid-detail-panel{padding:22px 20px}.aid-options-action .btn{width:100%}.service-repair{padding:20px}}
+@media(min-width:700px){.aid-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:1100px){.aid-style-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.aid-style-copy{padding:22px 24px}.aid-style h3{font-size:22px}.aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.aid-selection-note{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px}.aid-detail-panel{padding:32px}}
+@media(max-width:599px){.aid-style-copy{padding:20px}.aid-style h3{font-size:21px}.aid-detail-panel{padding:22px 20px}.aid-options-action .btn{width:100%}.service-repair{padding:20px}}
 .pay-callout{margin-top:32px;background:#fff;border:1px solid #b98b68;border-left:4px solid #704529;border-radius:16px;padding:24px;display:grid;gap:12px;color:var(--navy)}
 .pay-callout h3{font-size:24px;line-height:1.35}
 .pay-callout p{max-width:none;font-size:17px;line-height:1.65}
