@@ -366,6 +366,41 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 .service-repair p{font-size:17px;line-height:1.6}
 .steps-foot .consultation-scope{max-width:660px;font-size:16px;line-height:1.6;color:var(--navy)}
 
+
+/* Compact services layout */
+#what-to-expect{padding-block:48px}
+#what-to-expect .sec-head{margin-bottom:28px}
+#what-to-expect .steps{gap:24px}
+#what-to-expect .step p{line-height:1.55}
+.service-extras{display:grid;gap:18px;margin-top:28px;align-items:start}
+#what-to-expect .service-repair{max-width:none;margin:0;padding:22px 24px;border:1px solid #dec7b5;border-left:4px solid #704529;border-radius:4px 12px 12px 4px}
+#what-to-expect .service-repair h3{font-size:21px;margin-bottom:10px}
+#what-to-expect .service-repair p{line-height:1.55}
+#what-to-expect .process-details{max-width:none;width:100%;margin:0;border-color:#dec7b5}
+#what-to-expect .process-details summary{min-height:88px;padding:20px 22px}
+#what-to-expect .visit-summary-title{font-size:18px}
+#what-to-expect .visit-details-body{grid-template-columns:1fr;gap:20px;margin-inline:22px;padding:20px 0}
+#what-to-expect .steps-foot{display:grid;gap:10px 28px;grid-template-areas:"intro" "scope" "action" "family";margin-top:28px;padding-top:24px;border-top:1px solid #dec7b5}
+#what-to-expect .consultation-intro{grid-area:intro}
+#what-to-expect .consultation-scope{grid-area:scope;max-width:none}
+#what-to-expect .steps-foot .btn{grid-area:action}
+#what-to-expect .family-note{grid-area:family}
+@media(min-width:900px){
+  .service-extras{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}
+  #what-to-expect .steps-foot{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"intro action" "scope action" "family action";text-align:left;align-items:center}
+  #what-to-expect .steps-foot .btn{align-self:center;min-width:240px}
+}
+@media(min-width:1100px){
+  #what-to-expect .step{padding-top:52px}
+  #what-to-expect .step h3{font-size:20px;margin-bottom:8px}
+}
+@media(max-width:599px){
+  #what-to-expect{padding-block:40px}
+  #what-to-expect .step{padding-left:48px}
+  #what-to-expect .service-repair{padding:20px}
+  #what-to-expect .process-details summary{padding:18px 20px}
+}
+
 /* ---------- Benefits ---------- */
 #hearing-options{color:var(--navy)}
 #hearing-options .sec-head{max-width:880px;margin-inline:auto;text-align:center}
@@ -830,6 +865,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       </li>
     </ol>
 
+    <div class="service-extras">
     <div class="service-repair">
       <h3>Already wear hearing aids? Ask about repairs.</h3>
       <p>Brown assesses repair options for most major makes and models. Tell the Victoria office your brand, where it was fitted and the issue so the team can confirm eligibility, possible costs and next steps.</p>
@@ -856,6 +892,8 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         </div>
       </div>
     </details>
+
+    </div>
 
     <div class="steps-foot">
       <p class="consultation-intro">Start with a free consultation</p>
