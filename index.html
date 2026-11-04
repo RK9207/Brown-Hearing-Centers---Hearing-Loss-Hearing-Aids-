@@ -618,6 +618,59 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
  .mobile-book{max-width:180px;white-space:normal;text-align:center}
 }
 
+
+/* Visual hierarchy: generous artwork, quieter supporting panels, consistent spacing. */
+.hero-copy h1{max-width:20ch;line-height:1.14;text-wrap:balance}
+.hero-copy .lead{max-width:48ch}
+.hero-media{align-self:center}
+.hero-image{border-radius:20px}
+.sec-head{margin-bottom:32px}
+.provider-review-proof{background:transparent;border-left:3px solid #704529;border-radius:0;padding:4px 0 4px 20px}
+.review{border-color:#dec7b5;box-shadow:0 4px 16px rgba(5,28,59,.035)}
+.review-top{margin-bottom:18px}
+.proof-actions{gap:20px}
+.aid-style{border-color:#dec7b5;border-radius:16px}
+.aid-style-visual{height:216px;background:#fffaf6;padding:0;overflow:hidden}
+.aid-style-visual img{width:216px;height:216px;max-width:100%;object-fit:contain}
+.aid-style-abbr{top:16px;left:16px;background:transparent;border:0;padding:0;font-size:14px;letter-spacing:.07em}
+.aid-style-copy{padding:22px;gap:12px}
+.aid-style .aid-style-consideration{min-height:0}
+.aid-selection-note{align-items:start;padding-block:24px}
+.aid-detail-panel{background:transparent;border:0;border-radius:0;padding:0;margin-top:28px}
+.aid-brand-row{padding-bottom:24px}
+.aid-feature-grid{gap:24px}
+.aid-feature-grid h4{align-items:flex-start}
+.pay-callout{border:0;border-top:1px solid #dec7b5;border-radius:0;background:transparent;padding:28px 0 0;margin-top:28px}
+#what-to-expect .step h3{font-size:21px;line-height:1.35}
+#what-to-expect .step-intro{color:#704529;font-weight:600}
+#what-to-expect .service-extras{gap:20px}
+#what-to-expect .service-repair{border:0;border-left:3px solid #704529;border-radius:0 10px 10px 0}
+#what-to-expect .process-details{border-color:#dec7b5;border-radius:10px}
+#what-to-expect .aftercare-note{padding-top:20px;border-top:1px solid #dec7b5}
+#find-us .loc-card{border-color:#dec7b5}
+#find-us .map-container{border-radius:14px;overflow:hidden}
+@media(min-width:900px){
+ .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(0,1fr);gap:40px}
+ .hero{padding-block:52px}
+ .hero-copy h1{max-width:none;font-size:clamp(2.5rem,3.6vw,3rem)}
+}
+@media(min-width:1100px){
+ .aid-style-copy{grid-template-rows:2.6em minmax(3.2em,1fr) auto}
+ .aid-style .aid-style-consideration{min-height:5em}
+ .aid-feature-grid h4{min-height:50px}
+ #what-to-expect .step h3{min-height:2.7em}
+ #hearing-options .pay-callout{column-gap:32px}
+}
+@media(max-width:599px){
+ .hero-grid{gap:28px}
+ .hero-image{border-radius:14px}
+ .aid-style-visual{height:200px}
+ .aid-style-visual img{width:200px;height:200px}
+ .aid-style-copy{padding:20px}
+ .aid-detail-panel{padding:0}
+ .pay-callout{padding:24px 0 0}
+ .sec-head{margin-bottom:28px}
+}
 </style>
 </head>
 <body>
