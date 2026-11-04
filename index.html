@@ -218,47 +218,29 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
   .hero-grid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px}
 }
 
-/* ---------- Recognition and hearing-loss understanding ---------- */
-.recognition{padding-block:40px;color:var(--navy)}
-.recognition .recognition-head{max-width:900px;margin:0 auto 24px}
-.recognition .recognition-head p{max-width:760px;margin-inline:auto;font-size:18px;line-height:1.55;color:var(--navy)}
-.recognition .moments{display:grid;gap:0}
-.recognition .moment{display:grid;grid-template-columns:40px minmax(0,1fr);column-gap:12px;row-gap:6px;align-content:start;padding-block:18px}
+/* ---------- Recognition ---------- */
+.recognition{padding-block:48px;color:var(--navy)}
+.recognition .recognition-head{margin-bottom:32px}
+.recognition .recognition-head p{font-size:18px;line-height:1.6;color:#704529}
+.recognition .moments{display:grid;gap:0;border-top:1px solid #b98b68;border-bottom:1px solid #b98b68}
+.recognition .moment{display:grid;grid-template-columns:44px minmax(0,1fr);column-gap:16px;row-gap:8px;align-content:start;padding-block:24px}
 .recognition .moment+.moment{border-top:1px solid #b98b68}
-.recognition .moment .icon{grid-column:1;grid-row:1 / span 2;width:40px;height:40px;padding:9px;border-radius:50%;background:#704529;color:#fff}
-.recognition .moment h3{grid-column:2;grid-row:1;align-self:center;font:700 19px/1.35 var(--font-body)}
-.recognition .moment p{grid-column:2;grid-row:2;font-size:17px;line-height:1.55;color:var(--navy)}
-.hearing-understanding{display:grid;gap:20px;margin-top:24px;padding:24px;background:var(--cream);border:1px solid #dfc6b3;border-radius:16px;color:var(--navy)}
-.understanding-head{min-width:0}
-.understanding-head h3{font-size:clamp(1.375rem,1.1rem + .8vw,1.75rem);line-height:1.3;margin-bottom:12px}
-.hearing-understanding p{font-size:17px;line-height:1.55;color:var(--navy)}
-.hearing-types{display:grid;gap:16px;min-width:0}
-.hearing-type{min-width:0;padding:20px;background:#fff;border:1px solid #dfc6b3;border-left:4px solid #704529;border-radius:4px 12px 12px 4px}
-.hearing-type h4{margin:0 0 8px;font:600 20px/1.35 var(--font-head);color:var(--navy)}
-.hearing-understanding .understanding-note{margin:0;padding:0;background:transparent;border-radius:0;color:#704529;font-size:16px;line-height:1.5}
-.recognition .recog-close{max-width:none;margin:24px auto 0;text-align:left}
-.recognition .recog-close p{font-size:17px;line-height:1.55}
-.recognition .recog-close strong{display:block;margin-bottom:6px;font-size:19px;line-height:1.4;font-weight:600;color:var(--navy)}
-.recognition .recog-close .btn{margin-top:18px}
-@media(max-width:599px){
-  .recognition .recog-close .btn{width:100%}
-  .hearing-understanding{padding:20px 16px;gap:18px}
-  .hearing-types{gap:0}
-  .hearing-type{padding:16px 0;background:transparent;border:0;border-top:1px solid #b98b68;border-radius:0}
-  .hearing-type:last-child{padding-bottom:0}
-  .hearing-understanding .understanding-note{padding:0}
+.recognition .moment .icon{grid-column:1;grid-row:1 / span 2;width:44px;height:44px;padding:10px;border-radius:50%;background:#704529;color:#fff}
+.recognition .moment h3{grid-column:2;grid-row:1;align-self:center;font:700 20px/1.35 var(--font-body)}
+.recognition .moment p{grid-column:2;grid-row:2;font-size:17px;line-height:1.6;color:var(--navy)}
+.recognition .recog-close{max-width:800px;margin:32px auto 0;text-align:left}
+.recognition .recog-close p{font-size:18px;line-height:1.6}
+.recognition .recog-close strong{display:block;margin-bottom:6px;font-size:20px;line-height:1.4;font-weight:600;color:var(--navy)}
+@media (min-width:800px){
+  .recognition .recog-close{text-align:center}
 }
-@media(min-width:1024px){
-  .recognition{padding-block:48px}
-  .recognition .moments{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
-  .recognition .moment{padding:0}
-  .recognition .moment+.moment{border-top:0;border-left:1px solid #dfc6b3;padding-left:24px}
-  .hearing-understanding{margin-top:32px;padding:28px;gap:24px}
-  .understanding-head{display:block;max-width:850px}
-  .understanding-head h3{margin:0 0 12px}
-  .hearing-types{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
-  .recognition .recog-close{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:28px;align-items:center}
-  .recognition .recog-close .btn{margin:0}
+@media (min-width:1024px){
+  .recognition{padding-block:64px}
+  .recognition .moments{grid-template-columns:repeat(3,minmax(0,1fr));padding:28px;background:var(--cream);border:1px solid #b98b68;border-radius:16px}
+  .recognition .moment{padding:0 24px}
+  .recognition .moment:first-child{padding-left:0}
+  .recognition .moment:last-child{padding-right:0}
+  .recognition .moment+.moment{border-top:0;border-left:1px solid #b98b68}
 }
 
 /* ---------- Provider ---------- */
@@ -650,52 +632,28 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 <section class="sec recognition" aria-labelledby="recog-title">
   <div class="wrap">
     <div class="sec-head sec-head--center recognition-head">
-      <h2 id="recog-title">Hearing Loss Can Affect More Than Volume</h2>
-      <p>Hearing changes can be gradual. You may hear someone speaking but miss parts of the conversation—especially when other sounds compete for your attention.</p>
+      <h2 id="recog-title">Common Signs of Hearing Loss</h2>
+      <p>Hearing changes can be gradual. You or someone close to you may notice:</p>
     </div>
     <div class="moments">
       <div class="moment">
         <svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg>
-        <h3>Asking people to repeat themselves</h3>
-        <p>You hear a voice but miss words, or rely on watching someone’s face to follow the conversation.</p>
+        <h3>Asking for more repeats</h3>
+        <p>You miss words or rely on watching faces to follow a conversation.</p>
       </div>
       <div class="moment">
         <svg class="icon" aria-hidden="true"><use href="#i-users"/></svg>
         <h3>Struggling in busy places</h3>
-        <p>Conversations become harder to follow in restaurants, family gatherings or other noisy settings.</p>
+        <p>Restaurants and group conversations become harder to follow.</p>
       </div>
       <div class="moment">
         <svg class="icon" aria-hidden="true"><use href="#i-tv"/></svg>
-        <h3>Turning the television up</h3>
-        <p>Others comment on the volume, while you still struggle to catch everything being said.</p>
+        <h3>Turning the TV up</h3>
+        <p>Others mention the volume, or you miss the phone or doorbell.</p>
       </div>
     </div>
-
-    <div class="hearing-understanding" aria-labelledby="understanding-title">
-      <div class="understanding-head">
-        <h3 id="understanding-title">Different Hearing Problems Need Different Next Steps</h3>
-        <p>Hearing loss varies in its cause, pattern and severity. Understanding those differences helps determine whether hearing aids or another course of care may be appropriate.</p>
-      </div>
-      <div class="hearing-types">
-        <div class="hearing-type">
-          <h4>Conductive hearing loss</h4>
-          <p>Sound has difficulty passing through the outer or middle ear. Causes can include blockage or middle-ear problems, and some cases need medical care.</p>
-        </div>
-        <div class="hearing-type">
-          <h4>Sensorineural hearing loss</h4>
-          <p>Changes in the inner ear or hearing nerve affect hearing. Age-related changes and noise exposure are common causes; hearing aids may be appropriate.</p>
-        </div>
-        <div class="hearing-type">
-          <h4>Mixed hearing loss</h4>
-          <p>A combination of conductive and sensorineural hearing loss. Suitable next steps depend on the contributing causes and individual needs.</p>
-        </div>
-      </div>
-      <p class="understanding-note">Symptoms alone cannot establish the cause or determine the right treatment.</p>
-    </div>
-
     <div class="recog-close">
-      <p><strong>Noticing these signs doesn’t automatically mean you need hearing aids.</strong> A hearing evaluation helps establish where your hearing stands, so suitable next steps can be discussed.</p>
-      <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
+      <p><strong>Noticing a change doesn’t mean you need hearing aids.</strong> An evaluation can help you understand your hearing and explore suitable next steps.</p>
     </div>
   </div>
 </section>
