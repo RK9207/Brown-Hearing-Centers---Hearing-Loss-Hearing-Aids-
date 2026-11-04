@@ -433,8 +433,8 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 .aid-feature-grid p{font-size:17px;line-height:1.6;color:var(--navy)}
 .aid-feature-note{margin-top:24px;font-size:16px;line-height:1.5;color:#704529}
 .aid-options-action{display:flex;justify-content:center;margin-top:24px}
-@media(min-width:800px){.aid-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.aid-style{grid-template-columns:135px minmax(0,1fr)}}
-@media(min-width:1100px){.aid-style{grid-template-columns:170px minmax(0,1fr)}.aid-style-copy{padding:26px}.aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.aid-selection-note{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px}.aid-detail-panel{padding:32px}}
+@media(min-width:700px){.aid-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.aid-style{grid-template-columns:96px minmax(0,1fr)}}
+@media(min-width:1100px){.aid-style-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.aid-style{grid-template-columns:96px minmax(0,1fr)}.aid-style-copy{padding:20px 18px}.aid-style h3{font-size:22px}.aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.aid-selection-note{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px}.aid-detail-panel{padding:32px}}
 @media(max-width:599px){.aid-style{grid-template-columns:90px minmax(0,1fr)}.aid-style-visual{padding:8px;align-items:start}.aid-style-visual svg{margin-top:18px}.aid-style-copy{padding:20px 16px}.aid-style h3{font-size:21px}.aid-detail-panel{padding:22px 20px}.aid-options-action .btn{width:100%}.service-repair{padding:20px}}
 .pay-callout{margin-top:32px;background:#fff;border:1px solid #b98b68;border-left:4px solid #704529;border-radius:16px;padding:24px;display:grid;gap:12px;color:var(--navy)}
 .pay-callout h3{font-size:24px;line-height:1.35}
@@ -931,7 +931,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">BTE</span>
           <h3>Behind-the-ear</h3>
-          <p>A device worn behind the ear, connected by a tube to an earmold or earpiece.</p>
+          <p>Worn behind the ear, with a tube connecting to an earmold or earpiece.</p>
           <p class="aid-style-consideration">Discuss power requirements and ease of handling.</p>
         </div>
       </article>
@@ -940,7 +940,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">RIC</span>
           <h3>Receiver-in-canal</h3>
-          <p>A small unit behind the ear connects by a thin wire to a receiver in the ear canal.</p>
+          <p>A small behind-ear unit connects by a thin wire to a receiver in the canal.</p>
           <p class="aid-style-consideration">Compare fit, handling and suitable features.</p>
         </div>
       </article>
@@ -949,17 +949,35 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">ITE</span>
           <h3>In-the-ear</h3>
-          <p>A custom device sits within the outer ear, with its components housed together in the shell.</p>
+          <p>A custom device sits within the outer ear, with its components in one shell.</p>
           <p class="aid-style-consideration">Consider the fit and access to controls.</p>
         </div>
       </article>
       <article class="aid-style">
-        <div class="aid-style-visual"><svg viewBox="0 0 200 145" role="img" aria-label="General illustrations of three increasingly small canal-style hearing aids"><path d="M30 50c-14 0-20 15-16 32l6 15c4 9 17 10 23 0 9-14 9-28 2-38-4-6-8-9-15-9z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M96 60c-12 0-17 12-13 24l5 12c4 7 14 7 18-1 6-11 6-22 0-29-3-4-6-6-10-6z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M158 71c-9 0-13 8-10 17l4 8c3 5 10 5 13-1 5-8 5-15 0-20-2-3-4-4-7-4z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M37 93v15m65-16v16m59-17v17" stroke="#704529" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="aid-style-visual"><svg viewBox="0 30 60 90" role="img" aria-label="General illustration of a In-the-canal (ITC) hearing aid"><path d="M30 50c-14 0-20 15-16 32l6 15c4 9 17 10 23 0 9-14 9-28 2-38-4-6-8-9-15-9z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M37 93v15" stroke="#704529" stroke-width="2" stroke-linecap="round"/></svg></div>
         <div class="aid-style-copy">
-          <span class="aid-style-abbr">ITC · CIC · IIC</span>
-          <h3>Smaller canal styles</h3>
-          <p>Devices sit partly or deeper inside the ear canal, with different sizes and levels of visibility.</p>
-          <p class="aid-style-consideration">The smallest styles are not suitable for everyone.</p>
+          <span class="aid-style-abbr">ITC</span>
+          <h3>In-the-canal</h3>
+          <p>A custom device sits partly in the ear canal, with some of the faceplate visible.</p>
+          <p class="aid-style-consideration">Compare discretion with handling and access to controls.</p>
+        </div>
+      </article>
+      <article class="aid-style">
+        <div class="aid-style-visual"><svg viewBox="65 30 60 90" role="img" aria-label="General illustration of a Completely-in-canal (CIC) hearing aid"><path d="M96 60c-12 0-17 12-13 24l5 12c4 7 14 7 18-1 6-11 6-22 0-29-3-4-6-6-10-6z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M102 92v16" stroke="#704529" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="aid-style-copy">
+          <span class="aid-style-abbr">CIC</span>
+          <h3>Completely-in-canal</h3>
+          <p>A custom device fits within the ear canal for a less visible profile.</p>
+          <p class="aid-style-consideration">Discuss handling and feature limitations.</p>
+        </div>
+      </article>
+      <article class="aid-style">
+        <div class="aid-style-visual"><svg viewBox="130 30 60 90" role="img" aria-label="General illustration of a Invisible-in-canal (IIC) hearing aid"><path d="M158 71c-9 0-13 8-10 17l4 8c3 5 10 5 13-1 5-8 5-15 0-20-2-3-4-4-7-4z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M161 91v17" stroke="#704529" stroke-width="2" stroke-linecap="round"/></svg></div>
+        <div class="aid-style-copy">
+          <span class="aid-style-abbr">IIC</span>
+          <h3>Invisible-in-canal</h3>
+          <p>A very small custom device fits deeper inside the ear canal.</p>
+          <p class="aid-style-consideration">Suitability depends on your ear anatomy and hearing needs.</p>
         </div>
       </article>
     </div>
@@ -967,7 +985,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
     <div class="aid-selection-note">
       <h3>The right style is individual</h3>
-      <p>Your degree of hearing loss, ear anatomy, vision, ability to handle small devices, daily activities, appearance preferences and budget all matter. Your specialist explains which options are suitable and why.</p>
+      <p>Your degree of hearing loss, ear anatomy, vision, ability to handle small devices, daily activities, appearance preferences and budget all matter. Your specialist explains which options are suitable and why. The smallest styles are not suitable for everyone.</p>
     </div>
 
     <div class="aid-detail-panel">
