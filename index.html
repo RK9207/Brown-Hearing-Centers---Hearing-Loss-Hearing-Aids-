@@ -386,7 +386,7 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 #what-to-expect .steps-foot .btn{grid-area:action}
 #what-to-expect .family-note{grid-area:family}
 @media(min-width:900px){
-  #what-to-expect .service-extras{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;width:100%}
+  #what-to-expect .service-extras{grid-template-columns:minmax(0,1fr);gap:24px;width:100%;max-width:880px;margin-inline:auto}
   #what-to-expect .steps-foot{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"intro action" "scope action" "family action";text-align:left;align-items:center}
   #what-to-expect .steps-foot .btn{align-self:center;min-width:240px}
 }
