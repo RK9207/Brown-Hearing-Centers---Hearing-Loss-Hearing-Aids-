@@ -372,36 +372,41 @@ h3{font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem);line-height:1.3}
 #hearing-options .sec-head h2{max-width:none}
 #hearing-options .lead{color:var(--navy)}
 .aid-style-grid{display:grid;gap:20px}
-.aid-style{min-width:0;display:flex;flex-direction:column;background:#fff;border:1px solid #b98b68;border-radius:14px;overflow:hidden}
-.aid-style-visual{display:grid;place-items:center;background:#fff7f0;border-bottom:1px solid #ead8c8;padding:8px 16px}
-.aid-style-visual svg{width:180px;height:132px}
-.aid-style-copy{padding:20px}
-.aid-style-abbr{display:block;color:#704529;font-size:15px;line-height:1.4;font-weight:700;margin-bottom:8px}
-.aid-style h3{font-size:23px;line-height:1.3;margin-bottom:12px}
+.aid-style{min-width:0;display:grid;grid-template-columns:120px minmax(0,1fr);background:#fff;border:1px solid #dec7b5;border-radius:16px;overflow:hidden}
+.aid-style-visual{display:grid;place-items:center;background:#fae9db;border-right:1px solid #ead8c8;padding:12px}
+.aid-style-visual svg{width:100%;max-width:180px;height:auto}
+.aid-style-copy{padding:24px}
+.aid-style-abbr{display:inline-block;color:#704529;font-size:14px;line-height:1.4;font-weight:700;letter-spacing:.06em;margin-bottom:8px}
+.aid-style h3{font-size:24px;line-height:1.3;margin-bottom:12px}
 .aid-style p{font-size:17px;line-height:1.6;color:var(--navy)}
 .aid-style .aid-style-consideration{margin-top:12px;padding-top:12px;border-top:1px solid #ead8c8;font-size:16px;color:#704529}
 .aid-illustration-note{margin-top:14px;font-size:16px;line-height:1.5;color:#704529}
-.aid-selection-note{display:grid;gap:12px;margin-top:28px}
-.aid-selection-note h3,.aid-brand-row h3,.aid-feature-section>h3{font-size:24px;line-height:1.35}
+.aid-selection-note{display:grid;gap:12px;margin-top:24px;padding:22px 0;border-bottom:1px solid #d6b69c}
+.aid-selection-note h3,.aid-brand-row h3,.aid-feature-section>h3{font-size:25px;line-height:1.35}
 .aid-selection-note p,.aid-brand-row p{font-size:17px;line-height:1.6;color:var(--navy)}
-.aid-brand-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;margin-top:28px;padding-block:24px;border-block:1px solid #b98b68}
+.aid-detail-panel{margin-top:28px;padding:28px;background:#fff;border:1px solid #dec7b5;border-radius:16px}
+.aid-brand-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-bottom:24px;border-bottom:1px solid #dec7b5}
 .aid-brand-row h3{margin-bottom:8px}
-.aid-brand-names{display:flex;gap:12px;flex-wrap:wrap}
-.aid-brand-names span{padding:10px 20px;border:1px solid #b98b68;border-radius:8px;background:#fff;color:var(--navy);font-size:22px;font-weight:600}
-.aid-feature-section{margin-top:28px}
-.aid-feature-grid{display:grid;gap:24px;margin-top:20px}
-.aid-feature-grid h4{font:700 18px/1.4 var(--font-body);color:var(--navy);margin-bottom:8px}
+.aid-brand-names{display:flex;gap:24px;flex-wrap:wrap;align-items:center}
+.aid-brand-names span{color:var(--navy);font:600 27px/1.3 var(--font-head)}
+.aid-brand-names span+span{padding-left:24px;border-left:1px solid #dec7b5}
+.aid-feature-section{margin-top:24px}
+.aid-feature-grid{display:grid;gap:24px;margin-top:24px}
+.aid-feature-grid h4{display:flex;align-items:center;gap:12px;font:700 18px/1.4 var(--font-body);color:var(--navy);margin-bottom:12px}
+.aid-feature-icon{display:grid;place-items:center;flex:none;width:38px;height:38px;border-radius:50%;background:#704529;color:#fff}
+.aid-feature-icon svg{width:21px;height:21px}
 .aid-feature-grid p{font-size:17px;line-height:1.6;color:var(--navy)}
-.aid-feature-note{margin-top:20px;font-size:16px;line-height:1.5;color:#704529}
-.aid-options-action{display:flex;justify-content:center;margin-top:28px}
-@media(min-width:600px){.aid-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(min-width:960px){.aid-style-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.aid-selection-note{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px}}
-@media(max-width:599px){.aid-style{display:grid;grid-template-columns:96px minmax(0,1fr)}.aid-style-visual{padding:12px 4px;border-bottom:0;border-right:1px solid #ead8c8;align-items:start}.aid-style-visual svg{width:88px;height:auto;margin-top:8px}.aid-style-copy{padding:18px 16px}.aid-style h3{font-size:21px}.aid-options-action .btn{width:100%}.service-repair{padding:20px}}
+.aid-feature-note{margin-top:24px;font-size:16px;line-height:1.5;color:#704529}
+.aid-options-action{display:flex;justify-content:center;margin-top:24px}
+@media(min-width:800px){.aid-style-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.aid-style{grid-template-columns:135px minmax(0,1fr)}}
+@media(min-width:1100px){.aid-style{grid-template-columns:170px minmax(0,1fr)}.aid-style-copy{padding:26px}.aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:28px}.aid-selection-note{grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:32px}.aid-detail-panel{padding:32px}}
+@media(max-width:599px){.aid-style{grid-template-columns:90px minmax(0,1fr)}.aid-style-visual{padding:8px;align-items:start}.aid-style-visual svg{margin-top:18px}.aid-style-copy{padding:20px 16px}.aid-style h3{font-size:21px}.aid-detail-panel{padding:22px 20px}.aid-options-action .btn{width:100%}.service-repair{padding:20px}}
 .pay-callout{margin-top:32px;background:#fff;border:1px solid #b98b68;border-left:4px solid #704529;border-radius:16px;padding:24px;display:grid;gap:12px;color:var(--navy)}
 .pay-callout h3{font-size:24px;line-height:1.35}
 .pay-callout p{max-width:none;font-size:17px;line-height:1.65}
 .pay-callout .text-link-btn{display:inline-flex;align-items:center;min-height:44px;text-align:left}
 @media (min-width:768px){.pay-callout{padding:28px 32px}}
+@media(min-width:1100px){#hearing-options .pay-callout{grid-template-columns:minmax(0,1fr) minmax(0,2fr);column-gap:36px}#hearing-options .pay-callout h3{grid-column:1;grid-row:1 / span 3}#hearing-options .pay-callout p{grid-column:2}}
 
 /* ---------- FAQ ---------- */
 .faq-heading{max-width:none;margin-bottom:32px;margin-inline:auto;text-align:center}
@@ -870,7 +875,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     </div>
     <div class="aid-style-grid">
       <article class="aid-style">
-        <div class="aid-style-visual"><svg viewBox="0 0 200 145" role="img" aria-label="General illustration of a behind-the-ear hearing aid with a tube and earmold"><path d="M115 112c-5 7-8 13-15 13-9 0-16-8-16-18 0-11-9-17-12-29-8-31 3-58 30-58 24 0 37 19 34 40-2 16-12 23-16 33" fill="none" stroke="#b98b68" stroke-width="4" stroke-linecap="round"/><path d="M99 92c-13-15-14-35 0-43 16-9 29 6 20 20-5 7-13 4-15 12" fill="none" stroke="#b98b68" stroke-width="3.5" stroke-linecap="round"/><path d="M82 29c-22-4-27 18-25 40l3 14c2 10 14 12 18 2l-2-22c-1-10 0-18 6-22" fill="#12639a" stroke="#051c3b" stroke-width="2.5"/><path d="M75 34c12-24 39-16 37 5l-5 37" fill="none" stroke="#12639a" stroke-width="5" stroke-linecap="round"/><path d="M108 75c-9-3-15 1-13 9l7 10c7 4 14-2 13-8z" fill="#f6c8a4" stroke="#704529" stroke-width="2"/></svg></div>
+        <div class="aid-style-visual"><svg viewBox="40 12 110 125" role="img" aria-label="General illustration of a behind-the-ear hearing aid with a tube and earmold"><path d="M115 112c-5 7-8 13-15 13-9 0-16-8-16-18 0-11-9-17-12-29-8-31 3-58 30-58 24 0 37 19 34 40-2 16-12 23-16 33" fill="none" stroke="#b98b68" stroke-width="4" stroke-linecap="round"/><path d="M99 92c-13-15-14-35 0-43 16-9 29 6 20 20-5 7-13 4-15 12" fill="none" stroke="#b98b68" stroke-width="3.5" stroke-linecap="round"/><path d="M82 29c-22-4-27 18-25 40l3 14c2 10 14 12 18 2l-2-22c-1-10 0-18 6-22" fill="#12639a" stroke="#051c3b" stroke-width="2.5"/><path d="M75 34c12-24 39-16 37 5l-5 37" fill="none" stroke="#12639a" stroke-width="5" stroke-linecap="round"/><path d="M108 75c-9-3-15 1-13 9l7 10c7 4 14-2 13-8z" fill="#f6c8a4" stroke="#704529" stroke-width="2"/></svg></div>
         <div class="aid-style-copy">
           <span class="aid-style-abbr">BTE</span>
           <h3>Behind-the-ear</h3>
@@ -879,7 +884,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         </div>
       </article>
       <article class="aid-style">
-        <div class="aid-style-visual"><svg viewBox="0 0 200 145" role="img" aria-label="General illustration of a receiver-in-canal hearing aid with a thin wire"><path d="M115 112c-5 7-8 13-15 13-9 0-16-8-16-18 0-11-9-17-12-29-8-31 3-58 30-58 24 0 37 19 34 40-2 16-12 23-16 33" fill="none" stroke="#b98b68" stroke-width="4" stroke-linecap="round"/><path d="M99 92c-13-15-14-35 0-43 16-9 29 6 20 20-5 7-13 4-15 12" fill="none" stroke="#b98b68" stroke-width="3.5" stroke-linecap="round"/><rect x="60" y="39" width="15" height="40" rx="7.5" transform="rotate(-8 67 59)" fill="#12639a" stroke="#051c3b" stroke-width="2.5"/><path d="M68 41c3-31 39-31 44-8 4 16-6 31-6 44" fill="none" stroke="#12639a" stroke-width="2.5"/><rect x="101" y="75" width="12" height="13" rx="5" fill="#12639a" stroke="#051c3b" stroke-width="2"/></svg></div>
+        <div class="aid-style-visual"><svg viewBox="40 12 110 125" role="img" aria-label="General illustration of a receiver-in-canal hearing aid with a thin wire"><path d="M115 112c-5 7-8 13-15 13-9 0-16-8-16-18 0-11-9-17-12-29-8-31 3-58 30-58 24 0 37 19 34 40-2 16-12 23-16 33" fill="none" stroke="#b98b68" stroke-width="4" stroke-linecap="round"/><path d="M99 92c-13-15-14-35 0-43 16-9 29 6 20 20-5 7-13 4-15 12" fill="none" stroke="#b98b68" stroke-width="3.5" stroke-linecap="round"/><rect x="60" y="39" width="15" height="40" rx="7.5" transform="rotate(-8 67 59)" fill="#12639a" stroke="#051c3b" stroke-width="2.5"/><path d="M68 41c3-31 39-31 44-8 4 16-6 31-6 44" fill="none" stroke="#12639a" stroke-width="2.5"/><rect x="101" y="75" width="12" height="13" rx="5" fill="#12639a" stroke="#051c3b" stroke-width="2"/></svg></div>
         <div class="aid-style-copy">
           <span class="aid-style-abbr">RIC</span>
           <h3>Receiver-in-canal</h3>
@@ -888,7 +893,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         </div>
       </article>
       <article class="aid-style">
-        <div class="aid-style-visual"><svg viewBox="0 0 200 145" role="img" aria-label="General illustration of a custom in-the-ear hearing aid"><path d="M115 112c-5 7-8 13-15 13-9 0-16-8-16-18 0-11-9-17-12-29-8-31 3-58 30-58 24 0 37 19 34 40-2 16-12 23-16 33" fill="none" stroke="#b98b68" stroke-width="4" stroke-linecap="round"/><path d="M99 92c-13-15-14-35 0-43 16-9 29 6 20 20-5 7-13 4-15 12" fill="none" stroke="#b98b68" stroke-width="3.5" stroke-linecap="round"/><path d="M103 49c-14 0-20 13-16 28l6 20c3 8 13 10 19 3 8-10 11-24 7-36-3-9-7-15-16-15z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M97 63c7-4 15 0 14 10l-3 16" fill="none" stroke="#704529" stroke-width="2"/><circle cx="102" cy="65" r="3" fill="#704529"/></svg></div>
+        <div class="aid-style-visual"><svg viewBox="40 12 110 125" role="img" aria-label="General illustration of a custom in-the-ear hearing aid"><path d="M115 112c-5 7-8 13-15 13-9 0-16-8-16-18 0-11-9-17-12-29-8-31 3-58 30-58 24 0 37 19 34 40-2 16-12 23-16 33" fill="none" stroke="#b98b68" stroke-width="4" stroke-linecap="round"/><path d="M99 92c-13-15-14-35 0-43 16-9 29 6 20 20-5 7-13 4-15 12" fill="none" stroke="#b98b68" stroke-width="3.5" stroke-linecap="round"/><path d="M103 49c-14 0-20 13-16 28l6 20c3 8 13 10 19 3 8-10 11-24 7-36-3-9-7-15-16-15z" fill="#f6c8a4" stroke="#704529" stroke-width="2.5"/><path d="M97 63c7-4 15 0 14 10l-3 16" fill="none" stroke="#704529" stroke-width="2"/><circle cx="102" cy="65" r="3" fill="#704529"/></svg></div>
         <div class="aid-style-copy">
           <span class="aid-style-abbr">ITE</span>
           <h3>In-the-ear</h3>
@@ -913,6 +918,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <p>Your degree of hearing loss, ear anatomy, vision, ability to handle small devices, daily activities, appearance preferences and budget all matter. Your specialist explains which options are suitable and why.</p>
     </div>
 
+    <div class="aid-detail-panel">
     <div class="aid-brand-row" aria-label="Hearing-aid manufacturers carried by Brown">
       <div><h3>Brands available through Brown</h3><p>Ask about suitable Signia and Starkey hearing aids.</p></div>
       <div class="aid-brand-names"><span>Signia</span><span>Starkey</span></div>
@@ -921,11 +927,13 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     <div class="aid-feature-section">
       <h3>Choose features around your daily routine</h3>
       <div class="aid-feature-grid">
-        <div><h4>Rechargeable options</h4><p>Reduce the need to handle disposable batteries with a compatible rechargeable device and charger.</p></div>
-        <div><h4>Phone connectivity</h4><p>Compatible models can stream calls or audio and offer app controls. Phone and hearing-aid compatibility vary.</p></div>
-        <div><h4>TV and listening accessories</h4><p>Ask whether a compatible TV system or other assistive listening device could help in specific situations.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="11" rx="2"/><path d="M9 4h6M12 10l-2 3h4l-2 3"/></svg></span>Rechargeable options</h4><p>Reduce the need to handle disposable batteries with a compatible rechargeable device and charger.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg></span>Phone connectivity</h4><p>Compatible models can stream calls or audio and offer app controls. Phone and hearing-aid compatibility vary.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>TV and listening accessories</h4><p>Ask whether a compatible TV system or other assistive listening device could help in specific situations.</p></div>
       </div>
       <p class="aid-feature-note">Features vary by model and style. Your specialist can confirm availability and compatibility for the options you’re considering.</p>
+    </div>
+
     </div>
 
     <div class="pay-callout">
