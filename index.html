@@ -553,6 +553,14 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 /* Text on colored backgrounds: navy on cream; white on dark surfaces. */
 .sec--cream{color:var(--navy)}
 .sec--cream .lead,.sec--cream .small,.faq-more{color:var(--navy)}
+
+/* Heritage text and appointment actions */
+.provider-section .heritage{grid-template-areas:"copy" "photo" "actions";align-items:start}
+.provider-section .heritage figcaption{grid-area:copy;align-self:start}
+.provider-section .heritage-photo{grid-area:photo;align-self:start}
+.heritage-actions{grid-area:actions;display:flex;flex-wrap:wrap;gap:12px;align-self:end;align-items:center}
+@media(min-width:600px){.provider-section .heritage{grid-template-areas:"copy photo" "actions photo";grid-template-rows:1fr auto;align-items:start;row-gap:24px}}
+@media(max-width:599px){.heritage-actions{flex-direction:column;align-items:stretch}.heritage-actions .btn{width:100%}}
 </style>
 <link href="https://unpkg.com/maplibre-gl@4/dist/maplibre-gl.css" rel="stylesheet">
 <style>
@@ -752,6 +760,10 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
           <p class="heritage-caption">Archival photograph: the founder’s father painting an early office sign, c. 1966.</p>
         </figcaption>
         <img class="heritage-photo" data-image-id="IMG-HERITAGE-01" src="https://assets.cdn.filesafe.space/tiHIbXXZFe4aivLfJzFf/media/6ae4c4ac64f4028be3c5ea3c.jpg" alt="The founder’s father painting an early company office sign, c. 1966" width="960" height="1024" loading="lazy">
+        <div class="heritage-actions">
+          <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
+          <a class="btn btn-outline" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+        </div>
       </figure>
     </div>
   </section>
