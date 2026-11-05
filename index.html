@@ -791,6 +791,16 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
 /* Improve readability of feature compatibility and payment guidance. */
 #hearing-options .payment-action>span,#hearing-options .aid-feature-note{font-weight:600}
+
+/* Concise visit overview with optional care details. */
+#what-to-expect .visit-step-description{color:var(--navy);font-size:17px;line-height:1.6}
+#what-to-expect .visit-accordion{gap:0;border:1px solid #dec7b5;border-radius:12px;overflow:hidden;background:var(--cream)}
+#what-to-expect .visit-accordion .process-details{border:0;border-radius:0;background:transparent}
+#what-to-expect .visit-accordion .process-details+.process-details{border-top:1px solid #dec7b5}
+#what-to-expect .visit-accordion summary{min-height:68px;padding:16px 22px;border-radius:0}
+#what-to-expect .visit-accordion .visit-toggle{width:32px;height:32px}
+#what-to-expect .visit-accordion .visit-toggle svg{width:18px;height:18px}
+#what-to-expect .steps-foot{row-gap:10px}
 </style>
 </head>
 <body>
@@ -1065,51 +1075,38 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <li class="step">
         <span class="step-num" aria-hidden="true">1</span>
         <h3><span class="visually-hidden">Step 1: </span>Discuss your concerns</h3>
-        <p class="step-intro">Tell us what you’ve noticed.</p>
-        <ul class="step-details"><li>Share situations where hearing feels difficult.</li><li>Discuss your daily activities and what you’d like help with.</li></ul>
+        <p class="visit-step-description">Tell us where hearing feels difficult and what you’d like help with.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">2</span>
         <h3><span class="visually-hidden">Step 2: </span>Understand your hearing</h3>
-        <p class="step-intro">Find out where your hearing stands.</p>
-        <ul class="step-details"><li>If an evaluation is arranged, tests assess hearing and speech understanding.</li><li>A full evaluation is separate from a free consultation.</li></ul>
+        <p class="visit-step-description">If an evaluation is arranged, tests assess hearing and speech understanding.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">3</span>
         <h3><span class="visually-hidden">Step 3: </span>Review your results</h3>
-        <p class="step-intro">Make sense of what you’ve learned.</p>
-        <ul class="step-details"><li>Following an evaluation, your specialist explains your results.</li><li>Discuss suitable next steps and ask questions.</li></ul>
+        <p class="visit-step-description">Following an evaluation, your specialist explains the findings and suitable next steps.</p>
       </li>
       <li class="step">
         <span class="step-num" aria-hidden="true">4</span>
         <h3><span class="visually-hidden">Step 4: </span>Explore your options</h3>
-        <p class="step-intro">Consider what could help you.</p>
-        <ul class="step-details"><li>If hearing aids may help, compare options for your hearing, lifestyle and budget.</li><li>Your specialist explains the choices; the decision stays yours.</li></ul>
+        <p class="visit-step-description">If hearing aids may help, compare choices around your hearing, lifestyle and budget.</p>
       </li>
     </ol>
 
-    <div class="service-extras">
-    <div class="service-repair">
-      <h3>If you choose hearing aids: fitting and ongoing care</h3>
-      <p>At a separate fitting appointment, your devices are programmed for your hearing needs. Practice putting them in, taking them out, charging or changing batteries, and cleaning them. Follow-up visits provide fine-tuning, cleaning and maintenance as you adjust.</p>
-      <p style="margin-top:12px">Brown lists lifetime device programming among its complimentary services. Ask what is included for your hearing aids; getting comfortable may take more than one appointment.</p>
-    </div>
-    <div class="service-repair">
-      <h3>Already wear hearing aids? Ask about repairs.</h3>
-      <p>Brown assesses repairs for most major makes and models and operates its own hearing aid laboratory and repair center at its Orange headquarters. Tell the Victoria team your brand and the issue to discuss eligibility, costs and next steps.</p>
-    </div>
-
-    <details class="process-details">
-      <summary>
-        <span class="visit-summary-copy">
-          <span class="visit-summary-title">Helpful details for your visit</span>
-          <span class="visit-summary-preview">How long to allow and what to bring</span>
-        </span>
-        <span class="visit-toggle" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
-        </span>
-      </summary>
-      <div class="visit-details-body">
+    <div class="service-extras visit-accordion" aria-label="More details about your care">
+      <details class="process-details" name="visit-support">
+        <summary><span class="visit-summary-title">Fitting and ongoing support</span><span class="visit-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+        <div class="visit-details-body"><div><p>At a separate fitting appointment, your devices are programmed for your hearing needs. Practice putting them in, taking them out, charging or changing batteries, and cleaning them. Follow-up visits provide fine-tuning, cleaning and maintenance as you adjust.</p>
+      <p style="margin-top:12px">Brown lists lifetime device programming among its complimentary services. Ask what is included for your hearing aids; getting comfortable may take more than one appointment.</p></div></div>
+      </details>
+      <details class="process-details" name="visit-support">
+        <summary><span class="visit-summary-title">Already wear hearing aids?</span><span class="visit-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+        <div class="visit-details-body"><div><p>Brown assesses repairs for most major makes and models and operates its own hearing aid laboratory and repair center at its Orange headquarters. Tell the Victoria team your brand and the issue to discuss eligibility, costs and next steps.</p></div></div>
+      </details>
+      <details class="process-details" name="visit-support">
+        <summary><span class="visit-summary-title">Appointment timing and what to bring</span><span class="visit-toggle" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg></span></summary>
+              <div class="visit-details-body">
         <div>
           <h3>Appointment timing</h3>
           <p>Plan for up to an hour for a hearing evaluation, plus time to discuss the results. Fitting appointments generally take at least an hour. Every visit is different, and fine-tuning may take more than one appointment.</p>
@@ -1119,13 +1116,13 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
           <p>Bring a family member to join the discussion and help you remember the information shared. Written instructions for using and caring for your hearing aids are available on request.</p>
         </div>
       </div>
-    </details>
 
+      </details>
     </div>
 
     <div class="steps-foot">
       <p class="consultation-intro">Start with a free consultation</p>
-      <p class="consultation-scope">Discuss what you’ve noticed and ask questions about your options. A full hearing evaluation is a separate service; confirm what your visit includes and any costs when scheduling.</p>
+      <p class="consultation-scope">A full hearing evaluation is a separate service. Confirm visit details and any costs when scheduling.</p>
       <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
     </div>
   </div>
