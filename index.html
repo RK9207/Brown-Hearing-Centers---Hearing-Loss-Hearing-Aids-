@@ -725,6 +725,31 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
  #hearing-options .payment-action{flex-direction:column;align-items:stretch;gap:10px}
  #hearing-options .payment-action>span{max-width:none;text-align:center}
 }
+
+/* Two-column FAQ: introduction beside a compact, single-open accordion. */
+#faqs{padding-block:56px;color:var(--navy)}
+#faqs .faq-layout{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+#faqs .faq-heading{width:100%;max-width:none;margin:0;text-align:left}
+#faqs .faq-heading #faq-title{width:auto;max-width:none;text-align:left!important;font-size:clamp(1.875rem,2.7vw,2.5rem);line-height:1.2;margin:0 0 18px}
+#faqs .faq-heading p{max-width:36ch;font-size:17px;line-height:1.6;color:var(--navy)}
+#faqs .faq-call{display:table;margin-top:16px;padding-block:6px;font-size:17px;font-weight:700;min-height:44px}
+#faqs .faq-request{display:block;margin-top:4px;font-size:16px;min-height:44px;text-align:left}
+#faqs .faq-wrap{width:100%;max-width:none;margin:0;min-width:0}
+#faqs .faq-list{border-color:#dec7b5}
+#faqs .faq-item{border-color:#dec7b5}
+#faqs .faq-item summary{padding:18px 0;align-items:center;gap:18px;font-size:17px;line-height:1.45;min-height:68px}
+#faqs .faq-item summary::after{content:"+";display:grid;place-items:center;flex:none;width:32px;height:32px;margin:0;border-radius:50%;background:#704529;color:#fff;font:400 22px/1 var(--font-body)}
+#faqs .faq-item[open] summary::after{content:"−";background:#704529}
+#faqs .faq-answer{margin:0 0 18px;padding:18px 20px;background:var(--cream);border:1px solid #b98b68;border-radius:6px;color:var(--navy)}
+#faqs .faq-answer p{font-size:17px;line-height:1.6;color:var(--navy)}
+@media(min-width:900px){
+ #faqs .faq-layout{grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:64px;align-items:start}
+}
+@media(max-width:599px){
+ #faqs{padding-block:40px}
+ #faqs .faq-title-break{display:none}
+ #faqs .faq-answer{padding:16px}
+}
 </style>
 </head>
 <body>
@@ -1167,47 +1192,47 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
 <!-- ======================= 6. FAQ ======================= -->
 <section class="sec" id="faqs" aria-labelledby="faq-title">
-  <div class="wrap">
+  <div class="wrap faq-layout">
     <div class="sec-head faq-heading">
-      <h2 id="faq-title" style="width:100%;max-width:none;text-align:center!important;">Still Have Questions? Let’s Make Things Clear</h2>
+      <h2 id="faq-title">Questions before<br class="faq-title-break"> your visit</h2>
+      <p>Answers to common questions about hearing care and hearing aids. For anything else, talk with our Victoria team.</p>
+      <a class="faq-call" href="tel:4092078726">Call 409-207-8726</a>
+      <button type="button" class="text-link-btn faq-request" data-open-form aria-haspopup="dialog">Request an appointment</button>
     </div>
     <div class="faq-wrap">
 
       <div class="faq-list">
-        <details class="faq-item" open>
+        <details class="faq-item" name="hearing-care-faq" open>
           <summary>Is the consultation free?</summary>
           <div class="faq-answer"><p>Yes. Brown offers a free consultation to discuss your hearing concerns and options, as well as complimentary hearing screenings. A full hearing evaluation is a separate service. When scheduling, confirm which service your visit includes and whether any charges apply.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" name="hearing-care-faq">
           <summary>What happens at my first visit?</summary>
           <div class="faq-answer"><p>Your first visit is a chance to discuss what you’ve noticed and ask questions. If a hearing evaluation is arranged, it includes tests of your hearing and speech understanding, followed by a discussion of the results and suitable next steps. Plan for up to an hour for the evaluation, plus discussion time. A family member is welcome.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" name="hearing-care-faq">
           <summary>What happens after I request an appointment?</summary>
           <div class="faq-answer"><p>Your details are sent to the Victoria office as an appointment request. Submitting the form does not reserve a time; your appointment needs confirmation from the office. To arrange a time by phone or check on your request, call <a href="tel:4092078726">409-207-8726</a>.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" name="hearing-care-faq">
           <summary>How much do hearing aids cost?</summary>
           <div class="faq-answer"><p>Costs depend on the technology and features you choose. Your specialist can discuss options around your hearing, lifestyle and budget. Brown’s pricing is all-inclusive; ask exactly what is covered for the devices you’re considering. Financing is available through CareCredit and Cherry, subject to each provider’s terms and approval.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" name="hearing-care-faq">
           <summary>Which hearing aid style is right for me?</summary>
           <div class="faq-answer"><p>Suitability depends on your hearing needs, ear anatomy, dexterity, vision, daily activities and preferences. Your specialist can explain the trade-offs between suitable styles, including discreet options. The smallest styles are not suitable for everyone.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" name="hearing-care-faq">
           <summary>Will I get help using my hearing aids?</summary>
           <div class="faq-answer"><p>Yes. At your fitting, you’ll practice putting your hearing aids in and taking them out, charging or changing batteries, and cleaning them. Follow-up visits allow fine-tuning as you adjust to new sounds; more than one adjustment may be needed. Written instructions are available on request, with regular cleanings and check-ins supporting ongoing care.</p></div>
         </details>
-        <details class="faq-item">
+        <details class="faq-item" name="hearing-care-faq">
           <summary>Can you service hearing aids bought elsewhere?</summary>
           <div class="faq-answer"><p>Brown services and repairs hearing aids from most major manufacturers, including devices bought elsewhere. Contact the office with your brand and the problem so the team can discuss what may be possible. Out-of-warranty repairs may involve a fee, and not every device can be repaired.</p></div>
         </details>
       </div>
 
-      <div class="faq-more">
-        <p><strong>Still have a question?</strong></p>
-        <p>Call <a href="tel:4092078726">409-207-8726</a> or <button type="button" class="text-link-btn" data-open-form aria-haspopup="dialog">request an appointment</button> and ask us directly.</p>
-      </div>
+
     </div>
   </div>
 </section>
