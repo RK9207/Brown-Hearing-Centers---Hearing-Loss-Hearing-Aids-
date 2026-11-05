@@ -808,6 +808,10 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 /* Full-width visit details with extra space below the four steps. */
 #what-to-expect .service-extras.visit-accordion{width:100%;max-width:none;margin-inline:0;margin-top:48px}
 @media(max-width:599px){#what-to-expect .service-extras.visit-accordion{margin-top:36px}}
+
+/* Keep mobile calling primary and appointment request secondary. */
+.site-header .mobile-book{background:transparent;color:#fff;border-color:rgba(255,255,255,.85)}
+.site-header .mobile-book:hover{background:#fff;color:var(--navy);border-color:#fff}
 </style>
 </head>
 <body>
@@ -851,7 +855,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <span><span class="hc-label">Call to Schedule</span><span class="hc-num">409-207-8726</span></span>
     </a>
 
-    <button type="button" class="btn btn-primary mobile-book" data-open-form aria-haspopup="dialog">Request Appointment</button>
+    <button type="button" class="btn btn-outline mobile-book" data-open-form aria-haspopup="dialog">Request Appointment</button>
   </div>
 
   <div class="wrap mobile-explore">
