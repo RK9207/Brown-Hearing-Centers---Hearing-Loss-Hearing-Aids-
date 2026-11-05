@@ -815,6 +815,13 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
 /* Desktop hierarchy: phone call primary, appointment requests secondary. */
 @media(min-width:768px){button.btn-primary[data-open-form]{background:transparent;color:var(--primary);border-color:var(--primary)}button.btn-primary[data-open-form]:hover{background:var(--primary);color:#fff}.on-dark button.btn-primary[data-open-form]{color:#fff;border-color:#fff}.on-dark button.btn-primary[data-open-form]:hover{background:#fff;color:var(--navy)}}
+
+/* Call-first CTA pairs on desktop and mobile. */
+.hero .btn-row>.btn{min-height:54px;padding-inline:22px}
+.hero .hero-primary{min-width:0}
+.hero .btn-row>.btn-primary{color:#fff;text-decoration:none}
+.hero .btn-row>.btn-primary .icon{width:20px;height:20px}
+@media(max-width:599px){.hero .btn-row{gap:12px}}
 </style>
 </head>
 <body>
@@ -886,10 +893,8 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <h1 id="hero-title">Personal Guidance for Hearing Loss and Hearing Aids in Victoria, TX</h1>
       <p class="lead">Start with a <strong>free consultation</strong> in Victoria. Get personal guidance on your hearing and suitable next steps, with hearing evaluations, hearing-aid selection, fitting and ongoing care available through Brown.</p>
 
-      <div class="btn-row">
-        <button type="button" class="btn btn-primary hero-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
-        <a class="hero-call" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>Call 409-207-8726</span></a>
-      </div>
+      <div class="btn-row"><a class="btn btn-primary" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+        <button type="button" class="btn btn-outline hero-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button></div>
 
       <!-- Rating captured Oct 30, 2026 (Victoria Google profile). Recheck before launch. -->
       <a class="rating-badge" href="#reviews" aria-label="4.9 out of 5 from 50+ Google reviews. Jump to the reviews section.">
@@ -993,8 +998,8 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         </figcaption>
         <img class="heritage-photo" data-image-id="IMG-HERITAGE-01" src="https://assets.cdn.filesafe.space/tiHIbXXZFe4aivLfJzFf/media/6ae4c4ac64f4028be3c5ea3c.jpg" alt="The founder’s father painting an early company office sign, c. 1966" width="960" height="1024" loading="lazy">
         <div class="heritage-actions">
-          <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
-          <a class="btn btn-outline" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+          <a class="btn btn-primary" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+          <button type="button" class="btn btn-outline" data-open-form aria-haspopup="dialog">Request an Appointment</button>
         </div>
       </figure>
     </div>
@@ -1070,7 +1075,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <a class="see-all" href="https://www.google.com/search?q=brown+hearing+centers+victoria+tx&amp;sca_esv=34388a73116c39a8&amp;rlz=1C1CHBD_enIN1092IN1158&amp;sxsrf=AKL5yDgwk-ihNlVEgp5WbUIXzOlfVx3UMw%3A1793298643906&amp;ei=05Djar7yNvSz4-EPltfoqAg&amp;biw=1920&amp;bih=953&amp;oq=brown+hearing+centers+victo&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiG2Jyb3duIGhlYXJpbmcgY2VudGVycyB2aWN0byoGCAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzIFEAAY7wUyBRAAGO8FMgUQABjvBUjMMlCuDVjMI3ABeAGQAQCYAa0BoAHiB6oBAzAuNrABALgBAcgBAPgBAZgCB6ACpAnCAgoQABhHGNYEGLADwgIFEAAYgASYAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKIBgGQBgSSBwUxLjUuMaAH_ieyBwUwLjUuMbgHhgnCBwMzLTfIB0qACAE&amp;sclient=gws-wiz-serp#lrd=0x864267d4e652ab67:0x3103d1a3a7112a8c,1,,,," target="_blank" rel="noopener noreferrer">See all Google reviews<span class="visually-hidden"> (opens in a new tab)</span></a>
 
         <div class="proof-cta">
-          <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
+          <button type="button" class="btn btn-outline" data-open-form aria-haspopup="dialog">Request an Appointment</button>
         </div>
       </div>
     </div>
@@ -1137,7 +1142,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     <div class="steps-foot">
       <p class="consultation-intro">Start with a free consultation</p>
       <p class="consultation-scope">A full hearing evaluation is a separate service. Confirm visit details and any costs when scheduling.</p>
-      <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
+      <button type="button" class="btn btn-outline" data-open-form aria-haspopup="dialog">Request an Appointment</button>
     </div>
   </div>
 </section>
@@ -1233,7 +1238,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <div class="payment-details">
         <p>Price depends on technology and features, not just style. Brown offers all-inclusive pricing; ask for the cost and included services.</p>
         <p>Financing is available through CareCredit and Cherry, subject to each provider’s terms and approval.</p>
-        <div class="payment-action"><button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment <span aria-hidden="true">→</span></button><span>Ask about costs and payment options.</span></div>
+        <div class="payment-action"><button type="button" class="btn btn-outline" data-open-form aria-haspopup="dialog">Request an Appointment <span aria-hidden="true">→</span></button><span>Ask about costs and payment options.</span></div>
       </div>
     </div>
   </div>
@@ -1334,9 +1339,9 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     <h2 id="final-title">Take the first step toward easier conversations</h2>
     <p class="lead">Start with a free consultation at our Victoria office. Discuss what you’ve noticed and ask questions about your options.</p>
     <div class="btn-row">
-      <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
-      <a class="btn btn-outline" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
-    </div>
+          <a class="btn btn-primary" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
+          <button type="button" class="btn btn-outline" data-open-form aria-haspopup="dialog">Request an Appointment</button>
+        </div>
   </div>
 </section>
 
