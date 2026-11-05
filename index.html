@@ -917,6 +917,14 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 
 /* Center the provider headline and subtitle on mobile. */
 @media(max-width:767px){.provider-section .provider-head,.provider-section .provider-head h2,.provider-section .provider-role{text-align:center}}
+
+/* Keep the appointment label and calendar together. */
+#faqs .faq-request.appointment-secondary{display:inline-flex;align-items:center;justify-content:flex-start;gap:9px;text-decoration:none}
+#faqs .faq-request.appointment-secondary>span{display:inline;text-decoration:underline;text-underline-offset:5px}
+#faqs .faq-request.appointment-secondary .icon{display:block;width:18px;height:18px;flex:0 0 18px;margin:0}
+@media(min-width:1024px) and (prefers-reduced-motion:no-preference){
+ #faqs .faq-heading{will-change:transform}
+}
 </style>
 </head>
 <body>
@@ -1621,6 +1629,38 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
     });
   });
 </script>
+
+<script>
+/* Gentle differential scrolling for the FAQ introduction on desktop. */
+(function () {
+  var section = document.getElementById('faqs');
+  if (!section) return;
+  var intro = section.querySelector('.faq-heading');
+  var layout = section.querySelector('.faq-layout');
+  var header = document.getElementById('site-header');
+  var enabled = window.matchMedia('(min-width:1024px) and (prefers-reduced-motion:no-preference)');
+  var pending = false;
+  function update() {
+    pending = false;
+    if (!enabled.matches) { intro.style.removeProperty('transform'); return; }
+    var rect = layout.getBoundingClientRect();
+    var top = header ? header.getBoundingClientRect().bottom : 0;
+    var room = Math.max(0, layout.offsetHeight - intro.offsetHeight - 24);
+    var offset = Math.min(72, room, Math.max(0, (top - rect.top) * 0.18));
+    intro.style.transform = 'translate3d(0,' + offset.toFixed(2) + 'px,0)';
+  }
+  function schedule() {
+    if (!pending) { pending = true; window.requestAnimationFrame(update); }
+  }
+  window.addEventListener('scroll', schedule, { passive: true });
+  window.addEventListener('resize', schedule);
+  enabled.addEventListener('change', schedule);
+  section.addEventListener('toggle', schedule, true);
+  if (window.ResizeObserver) new ResizeObserver(schedule).observe(layout);
+  update();
+})();
+</script>
+
 </body>
 </html>
 
