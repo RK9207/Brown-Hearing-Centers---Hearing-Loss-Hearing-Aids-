@@ -776,6 +776,9 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
 /* Emphasize the archival photograph caption. */
 .provider-section .heritage .heritage-caption{font-weight:600}
+
+/* Family reassurance belongs with appointment details. */
+.modal-head .modal-family-note{color:#704529;font-weight:600;margin:0 auto 10px}
 </style>
 </head>
 <body>
@@ -851,7 +854,6 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <button type="button" class="btn btn-primary hero-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
         <a class="hero-call" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg><span>Call 409-207-8726</span></a>
       </div>
-      <p class="hero-note">Family members are welcome.</p>
 
       <!-- Rating captured Oct 30, 2026 (Victoria Google profile). Recheck before launch. -->
       <a class="rating-badge" href="#reviews" aria-label="4.9 out of 5 from 50+ Google reviews. Jump to the reviews section.">
@@ -1033,7 +1035,6 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
         <div class="proof-cta">
           <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
-          <p>Family members are welcome.</p>
         </div>
       </div>
     </div>
@@ -1114,7 +1115,6 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <p class="consultation-intro">Start with a free consultation</p>
       <p class="consultation-scope">Discuss what you’ve noticed and ask questions about your options. A full hearing evaluation is a separate service; confirm what your visit includes and any costs when scheduling.</p>
       <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
-      <p class="family-note">Family members are welcome.</p>
     </div>
   </div>
 </section>
@@ -1314,7 +1314,6 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
       <button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button>
       <a class="btn btn-outline" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
     </div>
-    <p class="fine">Family members are welcome.</p>
   </div>
 </section>
 
@@ -1364,6 +1363,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
   <div class="modal-card">
     <div class="modal-head">
       <h2 id="form-title">Request an Appointment</h2>
+      <p class="modal-family-note">Family members are welcome.</p>
       <p id="form-description">Send your details to the Victoria office. This is an appointment request; your visit needs confirmation from the office.</p>
       <p>Prefer to talk? Call <a href="tel:4092078726"><strong>409-207-8726</strong></a>.</p>
       <button type="button" class="modal-close" id="form-close" aria-label="Close appointment request form">
