@@ -899,6 +899,14 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 @media(max-width:767px){
  .hero .hero-copy .lead,.sec-head .lead,.recognition .recognition-head>p,.provider-section .provider-role,.final-cta .lead{font-size:17px}
 }
+
+/* Appointment request in the mobile header; desktop retains its call button. */
+.site-header .header-request{display:none}
+@media(max-width:1279px){
+ .site-header .header-call{display:none}
+ .site-header .header-request{display:inline-flex;background:transparent;color:#fff;border:1px solid rgba(255,255,255,.85);border-radius:999px;padding:10px 16px;min-height:48px;max-width:180px;flex:0 1 180px;font-size:16px;line-height:1.3;text-align:center;white-space:normal}
+ .site-header .header-request:hover{background:#fff;color:var(--navy)}
+}
 </style>
 </head>
 <body>
@@ -941,6 +949,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
       <svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>
       <span><span class="hc-label">Call to Schedule</span><span class="hc-num">409-207-8726</span></span>
     </a>
+    <button type="button" class="btn btn-outline header-request" data-open-form aria-haspopup="dialog">Request Appointment</button>
 
     
   </div>
