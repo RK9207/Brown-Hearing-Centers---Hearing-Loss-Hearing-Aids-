@@ -662,6 +662,25 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
  .aid-style-copy{padding:20px}
  .sec-head{margin-bottom:28px}
 }
+
+/* Compact six-style comparison; retain artwork sizes and the white supporting panels. */
+#hearing-options .sec-head{margin-bottom:24px}
+#hearing-options .aid-style-copy{display:flex;flex-direction:column;gap:10px;padding:18px 20px}
+#hearing-options .aid-style-copy h3{min-height:0;margin:0}
+#hearing-options .aid-style-copy>p{margin:0;font-size:17px;line-height:1.55}
+#hearing-options .aid-selection-note{margin-top:16px;padding-block:18px;gap:16px}
+#hearing-options .aid-detail-panel{margin-top:20px;padding:24px}
+#hearing-options .aid-brand-row{padding-bottom:18px;gap:16px}
+#hearing-options .aid-feature-section{margin-top:18px}
+#hearing-options .aid-feature-grid{margin-top:18px;gap:20px}
+#hearing-options .aid-feature-grid h4{margin-bottom:8px}
+#hearing-options .aid-feature-note{margin-top:16px}
+#hearing-options .pay-callout{margin-top:24px;padding:24px;gap:10px}
+#hearing-options .aid-options-action{margin-top:20px}
+@media(max-width:599px){
+ #hearing-options .aid-detail-panel,#hearing-options .pay-callout{padding:20px}
+ #hearing-options .aid-feature-grid{gap:18px}
+}
 </style>
 </head>
 <body>
@@ -1003,7 +1022,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
   <div class="wrap">
     <div class="sec-head">
       <h2 id="options-title">Hearing Aid Options for Your Everyday Life</h2>
-      <p class="lead">See how hearing-aid styles differ, then explore brands and features with your specialist. Your hearing needs and practical preferences guide the choice.</p>
+      <p class="lead">Compare six hearing-aid styles, then explore suitable options with your specialist.</p>
     </div>
     <div class="aid-style-grid">
       <article class="aid-style">
@@ -1011,8 +1030,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">BTE</span>
           <h3>Behind-the-ear</h3>
-          <p>Worn behind the ear, with a tube connecting to an earmold or earpiece.</p>
-          <p class="aid-style-consideration">Larger housing can make handling easier and accommodate higher power needs.</p>
+          <p>Sits behind the ear and connects to an earpiece through a tube. Larger housing can make handling easier.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1020,8 +1038,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">RIC</span>
           <h3>Receiver-in-canal</h3>
-          <p>A small behind-ear unit connects by a thin wire to a receiver in the canal.</p>
-          <p class="aid-style-consideration">A small behind-ear profile, with features that vary by model.</p>
+          <p>A small unit behind the ear connects by a thin wire to a receiver inside the ear canal.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1029,8 +1046,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">ITE</span>
           <h3>In-the-ear</h3>
-          <p>A custom device sits within the outer ear, with its components in one shell.</p>
-          <p class="aid-style-consideration">The larger custom shell can provide easier access to controls.</p>
+          <p>A custom shell sits in the outer ear and can provide easier access to controls.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1038,8 +1054,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">ITC</span>
           <h3>In-the-canal</h3>
-          <p>A custom device sits partly in the ear canal, with some of the faceplate visible.</p>
-          <p class="aid-style-consideration">Balances a smaller profile with handling and available controls.</p>
+          <p>Sits partly in the ear canal, balancing a smaller profile with handling and available controls.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1047,8 +1062,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">CIC</span>
           <h3>Completely-in-canal</h3>
-          <p>A custom device fits within the ear canal for a less visible profile.</p>
-          <p class="aid-style-consideration">A less visible fit, with small components to handle.</p>
+          <p>Fits within the ear canal for a less visible profile, with small components to handle.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1056,8 +1070,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">IIC</span>
           <h3>Invisible-in-canal</h3>
-          <p>A very small custom device fits deeper inside the ear canal.</p>
-          <p class="aid-style-consideration">A deeper, discreet fit; suitability depends on your ear anatomy and hearing needs.</p>
+          <p>Fits deeper in the ear canal for a discreet profile. Suitability depends on your hearing and ear anatomy.</p>
         </div>
       </article>
     </div>
@@ -1065,7 +1078,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
     <div class="aid-selection-note">
       <h3>Not sure which style to choose?</h3>
-      <p>You do not need to choose a style before your appointment. Your specialist helps compare suitable options around your hearing, ear anatomy, ease of handling, daily activities and budget. The smallest styles are not suitable for everyone.</p>
+      <p>You do not need to choose before your appointment. Your specialist will help compare options for your hearing, comfort and budget. The smallest styles are not suitable for everyone.</p>
     </div>
 
     <div class="aid-detail-panel">
@@ -1077,18 +1090,18 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     <div class="aid-feature-section">
       <h3>Choose features around your daily routine</h3>
       <div class="aid-feature-grid">
-        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="11" rx="2"/><path d="M9 4h6M12 10l-2 3h4l-2 3"/></svg></span>Simpler charging</h4><p>Reduce the need to handle disposable batteries with a compatible rechargeable device and charger.</p></div>
-        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg></span>Calls and audio from your phone</h4><p>Compatible models can stream calls or audio and offer app controls. Phone and hearing-aid compatibility vary.</p></div>
-        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Help hearing the TV</h4><p>Ask whether a compatible TV system or other assistive listening device could help in specific situations.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="11" rx="2"/><path d="M9 4h6M12 10l-2 3h4l-2 3"/></svg></span>Simpler charging</h4><p>Rechargeable options reduce the need to handle disposable batteries.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg></span>Calls and audio from your phone</h4><p>Compatible models offer call and audio streaming, plus app controls.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Help hearing the TV</h4><p>Compatible TV and listening accessories can help in specific situations.</p></div>
       </div>
-      <p class="aid-feature-note">Features vary by model and style. Your specialist can confirm availability and compatibility for the options you’re considering.</p>
+      <p class="aid-feature-note">Features vary by model and style. Ask your specialist to confirm device and phone compatibility.</p>
     </div>
 
     </div>
 
     <div class="pay-callout">
       <h3>Understand Costs and Payment Options</h3>
-      <p>Cost depends on technology and features, not simply the size or style of the hearing aid. Brown offers all-inclusive pricing; ask for the cost and included services for the devices you’re considering.</p>
+      <p>Price depends on technology and features, not just style. Brown offers all-inclusive pricing; ask for the cost and included services.</p>
       <p>Financing is available through CareCredit and Cherry, subject to each provider’s terms and approval.</p>
       <p><button type="button" class="text-link-btn" data-open-form aria-haspopup="dialog">Ask about costs and payment options</button></p>
     </div>
