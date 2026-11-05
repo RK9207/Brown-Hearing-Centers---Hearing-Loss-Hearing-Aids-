@@ -681,6 +681,50 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
  #hearing-options .aid-detail-panel,#hearing-options .pay-callout{padding:20px}
  #hearing-options .aid-feature-grid{gap:18px}
 }
+
+/* Focused visual treatment for technology and payment panels. */
+#hearing-options .aid-detail-panel{padding:28px;border:1px solid #dec7b5;border-radius:20px;box-shadow:0 8px 28px rgba(70,42,24,.045);background:#fff}
+#hearing-options .options-eyebrow{font:700 12px/1.4 var(--font-body);letter-spacing:.11em;text-transform:uppercase;color:#704529;margin:0 0 8px}
+#hearing-options .aid-brand-row{padding-bottom:22px;gap:24px}
+#hearing-options .aid-brand-row h3{font-size:27px;margin-bottom:6px}
+#hearing-options .aid-brand-names{gap:12px}
+#hearing-options .aid-brand-names span{display:block;padding:14px 22px;border:1px solid #ead8c8;border-radius:10px;background:#fffaf6;font-size:28px;line-height:1.2}
+#hearing-options .aid-feature-section{margin-top:22px}
+#hearing-options .aid-feature-section>h3{font-size:23px}
+#hearing-options .aid-feature-grid{margin-top:16px;gap:14px}
+#hearing-options .aid-feature-grid>div{padding:18px;background:#fdf4ed;border:1px solid #f0dfd1;border-radius:12px}
+#hearing-options .aid-feature-grid h4{align-items:center;font-size:17px;line-height:1.4;gap:12px;margin-bottom:10px}
+#hearing-options .aid-feature-icon{width:42px;height:42px;border-radius:12px;background:#704529;color:#fff}
+#hearing-options .aid-feature-grid p{font-size:17px;line-height:1.55;color:var(--navy)}
+#hearing-options .aid-feature-note{font-size:15px;margin-top:16px;color:#704529}
+#hearing-options .pay-callout{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:28px;margin-top:20px;padding:28px;background:#fff;border:1px solid #dec7b5;border-radius:20px;box-shadow:0 8px 28px rgba(70,42,24,.045)}
+#hearing-options .payment-heading{padding-right:24px;border-right:1px solid #ead8c8}
+#hearing-options .pay-callout h3{font-size:27px;line-height:1.3;grid-area:auto;margin:0}
+#hearing-options .payment-providers{display:flex;gap:18px;flex-wrap:wrap;margin-top:20px;color:#704529;font:600 19px/1.4 var(--font-head)}
+#hearing-options .payment-providers span+span{padding-left:18px;border-left:1px solid #dec7b5}
+#hearing-options .payment-details>p{font-size:17px;line-height:1.55;grid-area:auto}
+#hearing-options .payment-details>p+p{margin-top:10px}
+#hearing-options .payment-action{display:flex;align-items:center;flex-wrap:wrap;gap:12px 18px;margin-top:20px}
+#hearing-options .payment-action .btn{gap:16px}
+#hearing-options .payment-action>span{color:#704529;font-size:15px;max-width:180px;line-height:1.5}
+@media(min-width:700px) and (max-width:1099px){
+ #hearing-options .aid-feature-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ #hearing-options .aid-feature-grid h4{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:699px){
+ #hearing-options .aid-detail-panel,#hearing-options .pay-callout{padding:20px;border-radius:16px}
+ #hearing-options .aid-brand-row{gap:16px}
+ #hearing-options .aid-brand-names span{font-size:24px;padding:10px 18px}
+ #hearing-options .aid-brand-row h3{font-size:24px}
+ #hearing-options .aid-feature-grid{gap:10px}
+ #hearing-options .aid-feature-grid>div{padding:16px}
+ #hearing-options .pay-callout{grid-template-columns:1fr;gap:20px}
+ #hearing-options .payment-heading{border-right:0;border-bottom:1px solid #ead8c8;padding:0 0 18px}
+ #hearing-options .pay-callout h3{font-size:25px}
+ #hearing-options .payment-providers{margin-top:14px}
+ #hearing-options .payment-action{flex-direction:column;align-items:stretch;gap:10px}
+ #hearing-options .payment-action>span{max-width:none;text-align:center}
+}
 </style>
 </head>
 <body>
@@ -1083,7 +1127,7 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
 
     <div class="aid-detail-panel">
     <div class="aid-brand-row" aria-label="Hearing-aid manufacturers carried by Brown">
-      <div><h3>Brands available through Brown</h3><p>Ask about suitable Signia and Starkey hearing aids.</p></div>
+      <div><p class="options-eyebrow">Technology with personal guidance</p><h3>Brands available through Brown</h3><p>Ask about suitable Signia and Starkey hearing aids.</p></div>
       <div class="aid-brand-names"><span>Signia</span><span>Starkey</span></div>
     </div>
 
@@ -1100,12 +1144,17 @@ dialog.form-dialog::backdrop{background:rgba(5,28,59,.66)}
     </div>
 
     <div class="pay-callout">
-      <h3>Understand Costs and Payment Options</h3>
-      <p>Price depends on technology and features, not just style. Brown offers all-inclusive pricing; ask for the cost and included services.</p>
-      <p>Financing is available through CareCredit and Cherry, subject to each provider’s terms and approval.</p>
-      <p><button type="button" class="text-link-btn" data-open-form aria-haspopup="dialog">Ask about costs and payment options</button></p>
+      <div class="payment-heading">
+        <p class="options-eyebrow">Costs &amp; financing</p>
+        <h3>Understand your options.<br>Plan with confidence.</h3>
+        <div class="payment-providers" aria-label="Financing providers"><span>CareCredit</span><span>Cherry</span></div>
+      </div>
+      <div class="payment-details">
+        <p>Price depends on technology and features, not just style. Brown offers all-inclusive pricing; ask for the cost and included services.</p>
+        <p>Financing is available through CareCredit and Cherry, subject to each provider’s terms and approval.</p>
+        <div class="payment-action"><button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment <span aria-hidden="true">→</span></button><span>Ask about costs and payment options.</span></div>
+      </div>
     </div>
-    <div class="aid-options-action"><button type="button" class="btn btn-primary" data-open-form aria-haspopup="dialog">Request an Appointment</button></div>
   </div>
 </section>
 
