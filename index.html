@@ -925,88 +925,6 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 @media(min-width:1024px) and (prefers-reduced-motion:no-preference){
  #faqs .faq-heading{will-change:transform}
 }
-
-/* Compact options layout; every rule is scoped to this section. */
-#hearing-options[data-layout="compact-options"]{padding-block:32px}
-#hearing-options[data-layout] .sec-head{margin-bottom:22px}
-#hearing-options[data-layout] .sec-head h2{margin-bottom:12px}
-#hearing-options[data-layout] .aid-style-grid{gap:16px}
-#hearing-options[data-layout] .aid-style{border-radius:12px}
-#hearing-options[data-layout] .aid-style-visual{height:120px}
-#hearing-options[data-layout] .aid-style-visual img{width:120px;height:120px;max-width:100%;object-fit:contain}
-#hearing-options[data-layout] .aid-style-copy{display:grid;grid-template-rows:auto 1fr;gap:8px;padding:16px 18px}
-#hearing-options[data-layout] .aid-style h3{font-size:22px;line-height:1.3}
-#hearing-options[data-layout] .aid-style-copy>p{font-size:17px;line-height:1.5}
-#hearing-options[data-layout] .aid-style-abbr{top:12px;left:14px}
-#hearing-options[data-layout] .aid-illustration-note{margin-top:10px;font-size:15px;line-height:1.5}
-#hearing-options[data-layout] .aid-selection-note{margin-top:12px;padding:14px 0;gap:12px}
-#hearing-options[data-layout] .aid-selection-note h3{font-size:22px}
-#hearing-options[data-layout] .aid-selection-note p{font-size:17px;line-height:1.5}
-#hearing-options[data-layout] .aid-detail-panel{padding:20px;margin-top:16px;border-radius:14px}
-#hearing-options[data-layout] .aid-brand-row{padding-bottom:14px;gap:16px}
-#hearing-options[data-layout] .aid-brand-row h3{font-size:23px;margin-bottom:4px}
-#hearing-options[data-layout] .aid-brand-names{gap:10px}
-#hearing-options[data-layout] .aid-brand-names span{font-size:24px;padding:10px 16px}
-#hearing-options[data-layout] .aid-feature-section{margin-top:14px}
-#hearing-options[data-layout] .aid-feature-grid{margin-top:0;gap:12px}
-#hearing-options[data-layout] .aid-feature-grid>div{padding:14px;border-radius:10px}
-#hearing-options[data-layout] .aid-feature-grid h4{min-height:36px;gap:10px;margin-bottom:6px;font-size:17px}
-#hearing-options[data-layout] .aid-feature-icon{width:34px;height:34px;border-radius:10px}
-#hearing-options[data-layout] .aid-feature-icon svg{width:19px;height:19px}
-#hearing-options[data-layout] .aid-feature-grid p{font-size:17px;line-height:1.5}
-#hearing-options[data-layout] .aid-feature-note{margin-top:12px;font-size:15px;line-height:1.5}
-#hearing-options[data-layout] .pay-callout{padding:20px;gap:20px;margin-top:16px;border-radius:14px;grid-template-columns:minmax(0,1fr) minmax(0,2fr)}
-#hearing-options[data-layout] .pay-callout h3{font-size:24px;line-height:1.3}
-#hearing-options[data-layout] .payment-heading{padding-right:20px}
-#hearing-options[data-layout] .options-eyebrow{margin-bottom:6px}
-#hearing-options[data-layout] .payment-providers{margin-top:12px;font-size:18px}
-#hearing-options[data-layout] .payment-details>p{font-size:17px;line-height:1.5}
-#hearing-options[data-layout] .payment-details>p+p{margin-top:8px}
-#hearing-options[data-layout] .payment-action{margin-top:14px;gap:8px}
-#hearing-options[data-layout] .payment-action .cta-pair{gap:8px 20px}
-#hearing-options[data-layout] .payment-action>span{font-size:15px;line-height:1.4}
-@media(min-width:1100px){
- #hearing-options[data-layout] .aid-style-copy{grid-template-rows:29px 1fr}
-}
-@media(max-width:699px){
- #hearing-options[data-layout] .pay-callout{grid-template-columns:1fr;gap:14px}
- #hearing-options[data-layout] .payment-heading{padding:0;border:0;display:flex;flex-wrap:wrap;gap:6px 16px;align-items:center}
- #hearing-options[data-layout] .payment-heading .options-eyebrow{width:100%;margin:0}
- #hearing-options[data-layout] .payment-providers{margin:0}
- #hearing-options[data-layout] .aid-feature-grid>div{display:grid;grid-template-columns:1fr;gap:4px}
- #hearing-options[data-layout] .aid-feature-grid h4{margin:0;min-height:34px}
- #hearing-options[data-layout] .aid-style h3{font-size:21px}
- #hearing-options[data-layout] .aid-brand-row{gap:12px}
- #hearing-options[data-layout] .aid-brand-names span{font-size:22px;padding:8px 12px}
- #hearing-options[data-layout] .aid-selection-note{gap:6px}
-}
-
-/* Compact card headers keep artwork visible without a tall image band. */
-#hearing-options[data-layout] .aid-style-visual{height:100px}
-#hearing-options[data-layout] .aid-style-visual img{width:100px;height:100px}
-#hearing-options[data-layout] .aid-selection-note{padding:12px 0;margin-top:10px}
-#hearing-options[data-layout] .aid-detail-panel{padding:18px}
-#hearing-options[data-layout] .aid-feature-grid>div{padding:12px}
-#hearing-options[data-layout] .aid-feature-grid h4{margin-bottom:4px}
-#hearing-options[data-layout] .pay-callout{padding:18px}
-@media(min-width:1100px){
- #hearing-options[data-layout] .payment-action{display:grid;grid-template-columns:1fr}
- #hearing-options[data-layout] .payment-action>span{margin:0}
-}
-@media(max-width:699px){
- #hearing-options[data-layout] .aid-style{display:grid;grid-template-columns:minmax(0,1fr) 104px;grid-template-rows:96px auto;align-items:center}
- #hearing-options[data-layout] .aid-style-visual{grid-column:2;grid-row:1;height:96px;width:104px;border:0;background:transparent}
- #hearing-options[data-layout] .aid-style-visual img{width:96px;height:96px}
- #hearing-options[data-layout] .aid-style-copy{display:contents}
- #hearing-options[data-layout] .aid-style-copy h3{grid-column:1;grid-row:1;padding:24px 0 0 16px;align-self:center;font-size:21px}
- #hearing-options[data-layout] .aid-style-copy>p{grid-column:1 / -1;padding:0 16px 16px;font-size:17px;line-height:1.5}
- #hearing-options[data-layout] .aid-style-abbr{top:12px;left:16px}
- #hearing-options[data-layout] .aid-style-grid{gap:12px}
- #hearing-options[data-layout] .aid-feature-grid>div{grid-template-columns:34px minmax(0,1fr);column-gap:10px;padding:12px}
- #hearing-options[data-layout] .aid-feature-grid h4{display:contents}
- #hearing-options[data-layout] .aid-feature-icon{grid-column:1;grid-row:1 / span 2}
- #hearing-options[data-layout] .aid-feature-grid p{grid-column:2;margin-top:4px}
-}
 </style>
 </head>
 <body>
@@ -1334,7 +1252,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 </section>
 
 <!-- ======================= 5. PRACTICAL BENEFITS ======================= -->
-<section class="sec sec--cream" id="hearing-options" data-layout="compact-options" aria-labelledby="options-title">
+<section class="sec sec--cream" id="hearing-options" aria-labelledby="options-title">
   <div class="wrap">
     <div class="sec-head">
       <h2 id="options-title">Hearing Aid Options for Your Everyday Life</h2>
@@ -1346,7 +1264,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">BTE</span>
           <h3>Behind-the-ear</h3>
-          <p>Worn behind the ear with a tube connecting to an earpiece. Larger housing can make handling easier and accommodate higher power needs.</p>
+          <p>Sits behind the ear and connects to an earpiece through a tube. Larger housing can make handling easier.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1354,7 +1272,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">RIC</span>
           <h3>Receiver-in-canal</h3>
-          <p>A small unit sits behind the ear, with a thin wire connecting to a receiver in the canal for a less prominent profile.</p>
+          <p>A small unit behind the ear connects by a thin wire to a receiver inside the ear canal.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1362,7 +1280,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">ITE</span>
           <h3>In-the-ear</h3>
-          <p>A custom shell sits in the outer ear, keeping components together. Its larger size can make controls easier to see and handle.</p>
+          <p>A custom shell sits in the outer ear and can provide easier access to controls.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1370,7 +1288,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">ITC</span>
           <h3>In-the-canal</h3>
-          <p>Fits partly in the ear canal with some faceplate visible, balancing a smaller profile with ease of handling and access to available controls.</p>
+          <p>Sits partly in the ear canal, balancing a smaller profile with handling and available controls.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1378,7 +1296,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">CIC</span>
           <h3>Completely-in-canal</h3>
-          <p>Fits within the ear canal for a less visible profile. Small components require careful handling, and available features vary by device model.</p>
+          <p>Fits within the ear canal for a less visible profile, with small components to handle.</p>
         </div>
       </article>
       <article class="aid-style">
@@ -1386,7 +1304,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <div class="aid-style-copy">
           <span class="aid-style-abbr">IIC</span>
           <h3>Invisible-in-canal</h3>
-          <p>A very small custom device fits deeper in the ear canal for a discreet appearance. Suitability depends on your hearing needs and ear anatomy.</p>
+          <p>Fits deeper in the ear canal for a discreet profile. Suitability depends on your hearing and ear anatomy.</p>
         </div>
       </article>
     </div>
@@ -1394,20 +1312,20 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 
     <div class="aid-selection-note">
       <h3>Not sure which style to choose?</h3>
-      <p>Your specialist helps compare options for your hearing, comfort and budget. You do not need to choose beforehand; the smallest styles are not suitable for everyone.</p>
+      <p>You do not need to choose before your appointment. Your specialist will help compare options for your hearing, comfort and budget. The smallest styles are not suitable for everyone.</p>
     </div>
 
     <div class="aid-detail-panel">
     <div class="aid-brand-row" aria-label="Hearing-aid manufacturers carried by Brown">
-      <div><h3>Technology for your everyday life</h3><p>Explore suitable Signia and Starkey hearing aids with your specialist.</p></div>
+      <div><p class="options-eyebrow">Technology with personal guidance</p><h3>Brands available through Brown</h3><p>Ask about suitable Signia and Starkey hearing aids.</p></div>
       <div class="aid-brand-names"><span>Signia</span><span>Starkey</span></div>
     </div>
 
     <div class="aid-feature-section">
-      
+      <h3>Choose features around your daily routine</h3>
       <div class="aid-feature-grid">
         <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="14" height="11" rx="2"/><path d="M9 4h6M12 10l-2 3h4l-2 3"/></svg></span>Simpler charging</h4><p>Rechargeable options reduce the need to handle disposable batteries.</p></div>
-        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg></span>Phone calls &amp; audio</h4><p>Compatible models offer call and audio streaming, plus app controls.</p></div>
+        <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><path d="M10 18h4"/></svg></span>Calls and audio from your phone</h4><p>Compatible models offer call and audio streaming, plus app controls.</p></div>
         <div><h4><span class="aid-feature-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="12" rx="2"/><path d="M8 21h8M12 17v4"/></svg></span>Help hearing the TV</h4><p>Compatible TV and listening accessories can help in specific situations.</p></div>
       </div>
       <p class="aid-feature-note">Features vary by model and style. Ask your specialist to confirm device and phone compatibility.</p>
@@ -1417,7 +1335,8 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 
     <div class="pay-callout">
       <div class="payment-heading">
-        <h3>Clear costs. Payment options.</h3>
+        <p class="options-eyebrow">Costs &amp; financing</p>
+        <h3>Understand your options.<br>Plan with confidence.</h3>
         <div class="payment-providers" aria-label="Financing providers"><span>CareCredit</span><span>Cherry</span></div>
       </div>
       <div class="payment-details">
