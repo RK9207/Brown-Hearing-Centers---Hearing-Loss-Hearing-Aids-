@@ -876,6 +876,23 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 
 /* Desktop header logo size. */
 @media(min-width:1280px){.site-header .logo img{height:76.8px;width:auto}}
+
+/* More breathing room within the hero. */
+.hero{padding-block:48px 56px}
+.hero .hero-copy h1{margin-bottom:26px}
+.hero .hero-copy .lead{margin-bottom:32px;line-height:1.65}
+.hero .btn-row{gap:16px 28px}
+.hero .rating-badge{margin-top:48px}
+@media(min-width:900px){
+ .hero{padding-block:72px}
+ .hero-grid{column-gap:64px}
+}
+@media(max-width:599px){
+ .hero .hero-copy h1{margin-bottom:22px}
+ .hero .hero-copy .lead{margin-bottom:28px}
+ .hero .rating-badge{margin-top:36px}
+ .hero-grid{row-gap:36px}
+}
 </style>
 </head>
 <body>
