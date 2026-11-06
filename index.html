@@ -925,6 +925,35 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
 @media(min-width:1024px) and (prefers-reduced-motion:no-preference){
  #faqs .faq-heading{will-change:transform}
 }
+
+/* Mobile reading flow: smaller photographs and optional additional styles/reviews. */
+.mobile-fold-toggle,.heritage-caption-mobile{display:none}
+@media(max-width:767px){
+ .sec:not(.hero):not(#find-us){padding-block:36px}
+ .final-cta{padding-block:36px}
+ .sec .sec-head{margin-bottom:24px}
+ .hero .hero-media{max-width:300px;justify-self:center}
+ .hero .hero-grid{row-gap:24px}
+ .provider-section .provider{gap:20px}
+ .provider-section .provider-profile{width:100%;max-width:240px;justify-self:center}
+ .provider-section .provider-photo{aspect-ratio:4 / 5}
+ .provider-section .provider-caption{padding:14px 10px}
+ .provider-section .provider-review-proof{display:none}
+ .provider-section .heritage{margin-top:24px;padding:20px;gap:16px;grid-template-columns:1fr;grid-template-rows:auto auto;grid-template-areas:"copy" "photo"}
+ .provider-section .heritage-photo{width:150px;max-width:100%;height:auto;justify-self:center}
+ .heritage-caption-full{display:none}
+ .heritage-caption-mobile{display:inline}
+ .provider-section .heritage .heritage-caption{font-size:16px;line-height:1.5;margin-top:10px}
+ .provider-section .heritage-actions,#reviews .proof-cta,#what-to-expect .steps-foot>.cta-pair{display:none}
+ #reviews .reviews-head{gap:14px;margin-bottom:24px}
+ #reviews .proof-actions{margin-top:12px;gap:12px}
+ #what-to-expect .sec-head{margin-bottom:32px}
+ #what-to-expect .service-extras.visit-accordion{margin-top:28px}
+ #what-to-expect .steps-foot{margin-top:20px;padding-top:20px}
+ .mobile-fold-toggle.is-ready{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:48px;margin:16px 0 0;padding:12px 16px;background:#fff;color:var(--primary);border:1px solid var(--primary);border-radius:8px;font:600 16px/1.4 var(--font-body);cursor:pointer}
+ .mobile-fold-toggle.is-ready:hover{background:var(--cream)}
+ #patient-review-grid.mobile-folded>.review:nth-child(n+2),#hearing-style-grid.mobile-folded>.aid-style:nth-child(n+4){display:none}
+}
 </style>
 </head>
 <body>
@@ -1098,7 +1127,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         <figcaption>
           <h3 id="heritage-title">Family-owned since 1962</h3>
           <p>Brown Hearing Centers opened its first office in Victoria in 1962. Three generations later, it is still family owned and operated.</p>
-          <p class="heritage-caption">Archival photograph: the founder’s father painting an early office sign, c. 1966.</p>
+          <p class="heritage-caption"><span class="heritage-caption-full">Archival photograph: the founder’s father painting an early office sign, c. 1966.</span><span class="heritage-caption-mobile">An early Brown Hearing Centers office sign, c. 1966.</span></p>
         </figcaption>
         <img class="heritage-photo" data-image-id="IMG-HERITAGE-01" src="https://assets.cdn.filesafe.space/tiHIbXXZFe4aivLfJzFf/media/6ae4c4ac64f4028be3c5ea3c.jpg" alt="The founder’s father painting an early company office sign, c. 1966" width="960" height="1024" loading="lazy">
         <div class="heritage-actions">
@@ -1131,7 +1160,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
       </div>
 
       <!-- Reviews are verbatim from RESEARCH.md section 7A (R3, R1, R2). Max 3 shown on desktop and mobile by default. -->
-      <div class="review-grid">
+      <div class="review-grid" id="patient-review-grid">
         <article class="review">
           <div class="review-top">
             <span class="stars" aria-hidden="true"><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg><svg class="icon icon-star"><use href="#i-star"/></svg></span>
@@ -1175,6 +1204,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         </article>
       </div>
 
+      <button type="button" class="mobile-fold-toggle" id="mobile-review-toggle" aria-expanded="false" aria-controls="patient-review-grid">Show 2 more patient reviews</button>
       <div class="proof-actions">
         <a class="see-all" href="https://www.google.com/search?q=brown+hearing+centers+victoria+tx&amp;sca_esv=34388a73116c39a8&amp;rlz=1C1CHBD_enIN1092IN1158&amp;sxsrf=AKL5yDgwk-ihNlVEgp5WbUIXzOlfVx3UMw%3A1793298643906&amp;ei=05Djar7yNvSz4-EPltfoqAg&amp;biw=1920&amp;bih=953&amp;oq=brown+hearing+centers+victo&amp;gs_lp=Egxnd3Mtd2l6LXNlcnAiG2Jyb3duIGhlYXJpbmcgY2VudGVycyB2aWN0byoGCAAYFhgeMgYQABgWGB4yBhAAGBYYHjIGEAAYFhgeMgsQABiABBiKBRiGAzILEAAYgAQYigUYhgMyCxAAGIAEGIoFGIYDMgsQABiABBiKBRiGAzIFEAAY7wUyBRAAGO8FMgUQABjvBUjMMlCuDVjMI3ABeAGQAQCYAa0BoAHiB6oBAzAuNrABALgBAcgBAPgBAZgCB6ACpAnCAgoQABhHGNYEGLADwgIFEAAYgASYAwDiAwQYACBd4gMEGAAgXuIDBBgAIF_iAwQYACBg4gMEGAAgYeIDBBgAIGKIBgGQBgSSBwUxLjUuMaAH_ieyBwUwLjUuMbgHhgnCBwMzLTfIB0qACAE&amp;sclient=gws-wiz-serp#lrd=0x864267d4e652ab67:0x3103d1a3a7112a8c,1,,,," target="_blank" rel="noopener noreferrer">See all Google reviews<span class="visually-hidden"> (opens in a new tab)</span></a>
 
@@ -1258,7 +1288,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
       <h2 id="options-title">Hearing Aid Options for Your Everyday Life</h2>
       <p class="lead">Compare six hearing-aid styles, then explore suitable options with your specialist.</p>
     </div>
-    <div class="aid-style-grid">
+    <div class="aid-style-grid" id="hearing-style-grid">
       <article class="aid-style">
         <div class="aid-style-visual"><img src="https://assets.cdn.filesafe.space/EUtEK20ew1Zp6xqYnGTi/media/6aeb7a7ddfd4785f085637ff.svg" alt="Behind-the-ear (BTE) hearing-aid style illustration" width="160" height="180" loading="lazy" decoding="async"></div>
         <div class="aid-style-copy">
@@ -1308,6 +1338,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         </div>
       </article>
     </div>
+    <button type="button" class="mobile-fold-toggle" id="mobile-style-toggle" aria-expanded="false" aria-controls="hearing-style-grid">View all 6 hearing-aid styles</button>
     <p class="aid-illustration-note">Illustrations show general styles. Actual devices and fit vary.</p>
 
     <div class="aid-selection-note">
@@ -1658,6 +1689,28 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
   section.addEventListener('toggle', schedule, true);
   if (window.ResizeObserver) new ResizeObserver(schedule).observe(layout);
   update();
+})();
+</script>
+
+
+<script>
+/* Keep extra reviews/styles available with mobile-only disclosure controls. */
+(function () {
+  function setup(buttonId, gridId, more, less) {
+    var button = document.getElementById(buttonId);
+    var grid = document.getElementById(gridId);
+    if (!button || !grid) return;
+    grid.classList.add('mobile-folded');
+    button.classList.add('is-ready');
+    button.addEventListener('click', function () {
+      var expanded = button.getAttribute('aria-expanded') === 'true';
+      button.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+      grid.classList.toggle('mobile-folded', expanded);
+      button.textContent = expanded ? more : less;
+    });
+  }
+  setup('mobile-review-toggle', 'patient-review-grid', 'Show 2 more patient reviews', 'Show fewer patient reviews');
+  setup('mobile-style-toggle', 'hearing-style-grid', 'View all 6 hearing-aid styles', 'Show fewer hearing-aid styles');
 })();
 </script>
 
