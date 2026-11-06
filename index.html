@@ -954,6 +954,12 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
  .mobile-fold-toggle.is-ready:hover{background:var(--cream)}
  #patient-review-grid.mobile-folded>.review:nth-child(n+2),#hearing-style-grid.mobile-folded>.aid-style:nth-child(n+4){display:none}
 }
+
+/* Keep the map address overlay compact rather than stretched. */
+#find-us .map-card{right:auto;width:fit-content;max-width:min(280px,calc(100% - 24px))}
+@media(max-width:600px){
+ #find-us .map-card{right:auto;width:fit-content;max-width:min(240px,calc(100% - 16px))}
+}
 </style>
 </head>
 <body>
