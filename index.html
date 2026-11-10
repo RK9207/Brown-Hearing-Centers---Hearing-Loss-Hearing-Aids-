@@ -977,6 +977,18 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
  .provider-section .heritage.heritage-team{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-areas:"copy photo" "actions photo";grid-template-rows:1fr auto;column-gap:32px;row-gap:24px}
  .provider-section .heritage-team .heritage-photo{max-width:none;width:100%;align-self:center}
 }
+
+/* Mobile team card: heading, uncropped team photo, then readable story. */
+@media(max-width:767px){
+ .provider-section .heritage.heritage-team{grid-template-areas:"title" "photo" "copy";grid-template-columns:minmax(0,1fr);gap:16px;padding:18px;margin-top:24px}
+ .provider-section .heritage-team figcaption{display:contents}
+ .provider-section .heritage-team #heritage-title{grid-area:title;margin:0;font-size:24px;line-height:1.3}
+ .provider-section .heritage-team .heritage-photo{grid-area:photo;display:block;width:100%;max-width:480px;height:auto;border-width:1px;border-radius:10px}
+ .provider-section .heritage-team .heritage-team-story{grid-area:copy;min-width:0}
+ .provider-section .heritage-team .heritage-team-story>p{font-size:17px;line-height:1.6}
+ .provider-section .heritage-team .heritage-team-story .heritage-caption{display:none}
+ .provider-section .heritage-team .heritage-actions{display:none}
+}
 </style>
 </head>
 <body>
@@ -1149,9 +1161,11 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
       <figure class="heritage heritage-team" aria-labelledby="heritage-title">
         <figcaption>
           <h3 id="heritage-title">Three Generations of Personalized Care</h3>
+          <div class="heritage-team-story">
           <p>Brown Hearing Centers began in Victoria in 1962 and remains family owned and operated across three generations. Our team combines hearing-care experience with a commitment to personal attention and lasting patient relationships.</p>
           <p style="margin-top:12px">From understanding your hearing to choosing and using hearing aids, we’re here to help—with follow-up adjustments, maintenance and cleanings that support you beyond your first visit.</p>
           <p class="heritage-caption">The Brown Hearing Centers team.</p>
+                  </div>
         </figcaption>
         <img class="heritage-photo" data-image-id="IMG-HERITAGE-01" src="https://media.audiologydesign.com/wp-content/uploads/sites/545/2025/07/10144207/Group-Pic-scaled.jpg" alt="The Brown Hearing Centers team gathered outdoors" loading="lazy">
         <div class="heritage-actions">
