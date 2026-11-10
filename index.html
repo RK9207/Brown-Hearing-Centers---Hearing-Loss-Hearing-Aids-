@@ -989,6 +989,12 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
  .provider-section .heritage-team .heritage-team-story .heritage-caption{display:none}
  .provider-section .heritage-team .heritage-actions{display:none}
 }
+
+/* Responsive optimized team photograph. */
+.provider-section .heritage-team .heritage-team-picture{grid-area:photo;display:block;width:100%;max-width:560px;justify-self:center;align-self:start}
+.provider-section .heritage-team .heritage-team-picture .heritage-photo{display:block;width:100%;height:auto;margin:0}
+@media(min-width:900px){.provider-section .heritage-team .heritage-team-picture{max-width:none;align-self:center}}
+@media(max-width:767px){.provider-section .heritage-team .heritage-team-picture{max-width:480px}}
 </style>
 </head>
 <body>
@@ -1167,7 +1173,10 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
           <p class="heritage-caption">The Brown Hearing Centers team.</p>
                   </div>
         </figcaption>
-        <img class="heritage-photo" data-image-id="IMG-HERITAGE-01" src="https://media.audiologydesign.com/wp-content/uploads/sites/545/2025/07/10144207/Group-Pic-scaled.jpg" alt="The Brown Hearing Centers team gathered outdoors" loading="lazy">
+        <picture class="heritage-team-picture">
+          <source media="(max-width:767px)" srcset="https://files.leadconnectorhq.com/file/6af30c03421749dec79af0a2/hearcare-group-photo-mobile.webp" type="image/webp">
+          <img class="heritage-photo" data-image-id="IMG-HERITAGE-01" src="https://files.leadconnectorhq.com/file/6af30c03421749dec79af0ae/hearcare-group-photo1.webp" alt="The Brown Hearing Centers team gathered outdoors" loading="lazy">
+        </picture>
         <div class="heritage-actions">
           <a class="btn btn-primary" href="tel:4092078726"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg>Call 409-207-8726</a>
           <button type="button" class="btn btn-outline appointment-secondary" data-open-form aria-haspopup="dialog"><span>Request an Appointment</span><svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 11h18"/></svg></button>
