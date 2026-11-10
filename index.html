@@ -969,6 +969,14 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
  .site-footer .f-brand>a{display:inline-flex;justify-content:center}
  .site-footer .footer-legal{text-align:center;justify-items:center}
 }
+
+/* Give the full team photograph enough room to be recognizable. */
+.provider-section .heritage.heritage-team{grid-template-columns:minmax(0,1fr);grid-template-areas:"copy" "photo" "actions";grid-template-rows:auto;gap:24px}
+.provider-section .heritage-team .heritage-photo{width:100%;max-width:560px;height:auto;object-fit:contain;justify-self:center;align-self:start}
+@media(min-width:900px){
+ .provider-section .heritage.heritage-team{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);grid-template-areas:"copy photo" "actions photo";grid-template-rows:1fr auto;column-gap:32px;row-gap:24px}
+ .provider-section .heritage-team .heritage-photo{max-width:none;width:100%;align-self:center}
+}
 </style>
 </head>
 <body>
@@ -1138,7 +1146,7 @@ button.appointment-secondary:hover{background:transparent;color:var(--primary)}
         </div>
       </div>
 
-      <figure class="heritage" aria-labelledby="heritage-title">
+      <figure class="heritage heritage-team" aria-labelledby="heritage-title">
         <figcaption>
           <h3 id="heritage-title">Three Generations of Personalized Care</h3>
           <p>Brown Hearing Centers began in Victoria in 1962 and remains family owned and operated across three generations. Our team combines hearing-care experience with a commitment to personal attention and lasting patient relationships.</p>
