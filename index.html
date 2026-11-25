@@ -948,7 +948,9 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
 :root { --light-blue:#e7eef4; }
 .hero { background:linear-gradient(115deg,#fffaf6 0%,#fdf4ed 48%,#e7eef4 100%); }
 #reviews,#find-us { background:var(--light-blue); }
-.recognition .moments { background:var(--cream); }
+.recognition .moments { background:var(--light-blue); border-color:var(--navy); }
+.recognition .moment+.moment { border-color:var(--navy); }
+.recognition .moment .icon { background:var(--navy); color:#fff; }
 #specialist .provider-profile { background:var(--cream); }
 #hearing-options { background:var(--cream); }
 #hearing-options .aid-feature-grid>div { background:var(--cream); border-color:#dec7b5; }
