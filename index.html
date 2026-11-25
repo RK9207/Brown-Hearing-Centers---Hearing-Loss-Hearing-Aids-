@@ -278,7 +278,7 @@ h3 { font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem); line-height:1.3; }
 .steps { display:grid; gap:28px; max-width:760px; margin-inline:auto; }
 .step { position:relative; padding-left:56px; min-width:0; }
 .step-num { position:absolute; left:0; top:0; width:36px; height:36px; border-radius:50%; background:#704529; color:#fff; display:grid; place-items:center; font:600 19px/1 var(--font-body); }
-.step:not(:last-child)::before { content:""; position:absolute; left:17px; top:44px; bottom:-20px; width:2px; background:#e9cdb8; }
+.step:not(:last-child)::before { content:""; position:absolute; left:17px; top:44px; bottom:-20px; width:2px; background:var(--navy); }
 .step h3 { font-size:20px; line-height:1.4; margin-bottom:10px; padding-top:3px; }
 .step p { font-size:17px; line-height:1.65; }
 .process-details { max-width:880px; margin:40px auto 0; border:1px solid var(--border); border-radius:14px; background:var(--cream); color:var(--navy); }
@@ -326,7 +326,7 @@ h3 { font-size:clamp(1.3125rem,1.2rem + .6vw,1.625rem); line-height:1.3; }
 #what-to-expect .process-details summary { min-height:88px; padding:20px 22px; }
 #what-to-expect .visit-summary-title { font-size:18px; }
 #what-to-expect .visit-details-body { grid-template-columns:1fr; gap:20px; margin-inline:22px; padding:20px 0; }
-#what-to-expect .steps-foot { display:grid; gap:10px 28px; grid-template-areas:"intro" "scope" "action" "family"; margin-top:28px; padding-top:24px; border-top:1px solid #dec7b5; }
+#what-to-expect .steps-foot { display:grid; gap:10px 28px; grid-template-areas:"intro" "scope" "action" "family"; margin-top:28px; padding-top:24px; border-top:1px solid var(--navy); }
 #what-to-expect .consultation-intro { grid-area:intro; }
 #what-to-expect .consultation-scope { grid-area:scope; max-width:none; }
 #what-to-expect .steps-foot .btn { grid-area:action; }
@@ -636,8 +636,8 @@ dialog.form-dialog::backdrop { background:rgba(5,28,59,.66); }
 #faqs .faq-call { display:table; margin-top:16px; padding-block:6px; font-size:17px; font-weight:700; min-height:44px; }
 #faqs .faq-request { display:block; margin-top:4px; font-size:16px; min-height:44px; text-align:left; }
 #faqs .faq-wrap { width:100%; max-width:none; margin:0; min-width:0; }
-#faqs .faq-list { border-color:#dec7b5; }
-#faqs .faq-item { border-color:#dec7b5; }
+#faqs .faq-list { border-color:var(--navy); }
+#faqs .faq-item { border-color:var(--navy); }
 #faqs .faq-item summary { padding:18px 0; align-items:center; gap:18px; font-size:17px; line-height:1.45; min-height:68px; }
 #faqs .faq-item summary::after { content:"+"; display:grid; place-items:center; flex:none; width:32px; height:32px; margin:0; border-radius:50%; background:#704529; color:#fff; font:400 22px/1 var(--font-body); }
 #faqs .faq-item[open] summary::after { content:"−"; background:#704529; }
