@@ -1019,6 +1019,19 @@ button.appointment-secondary:hover { background:var(--primary); color:#fff; }
 #faqs .faq-item summary::after,
 #faqs .faq-item[open] summary::after { background:var(--navy); color:#fff; }
 
+
+/* Keep the desktop specialist portrait balanced with a tighter text column. */
+@media (min-width:900px) {
+  #specialist .provider { row-gap:14px; }
+  #specialist .provider-role { margin-top:8px; }
+  #specialist .provider-license { margin-top:12px; }
+  #specialist .provider-benefits { margin-top:20px; gap:18px; }
+  #specialist .provider-benefits strong { margin-bottom:4px; }
+  #specialist .provider-review-proof { margin-top:20px; padding-block:6px; }
+  #specialist .provider-review-link { margin-top:4px; }
+  #specialist .provider-caption { padding-block:16px; }
+}
+
 </style>
 </head>
 <body>
