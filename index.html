@@ -7,6 +7,7 @@
 <meta name="description" content="Explore hearing aids and personalized hearing care at Brown Hearing Centers in Victoria, TX.">
 <meta name="theme-color" content="#051c3b">
 
+<link rel="preload" as="image" href="https://files.leadconnectorhq.com/file/6b06d5c063aa78234dc69347/hearing-care-hero-web-optimized.webp">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@500;600&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -957,6 +958,46 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
   .hero { background:linear-gradient(160deg,#fffaf6 0%,#fdf4ed 48%,#e7eef4 100%); }
 }
 
+
+/* Full-width hero photograph with a readable beige content panel. */
+.hero.hero--background {
+  background:#e7eef4 url("https://files.leadconnectorhq.com/file/6b06d5c063aa78234dc69347/hearing-care-hero-web-optimized.webp") center center / cover no-repeat;
+  padding-block:48px;
+}
+.hero--background .hero-grid { display:block; }
+.hero--background .hero-copy {
+  width:min(100%,640px); padding:36px; background:#fdf4ed;
+  border:1px solid #b98b68; border-radius:20px;
+  box-shadow:0 14px 36px rgba(5,28,59,.12);
+}
+.hero--background .hero-copy h1 { max-width:none; font-size:clamp(2.25rem,3vw,2.75rem); line-height:1.17; margin-bottom:22px; }
+.hero--background .hero-copy .lead { max-width:none; margin-bottom:26px; }
+.hero--background .hero-trust { margin-top:26px; padding-top:20px; }
+@media (min-width:900px) and (max-width:1199px) {
+  .hero--background .hero-copy { width:58%; padding:30px; }
+  .hero--background .hero-copy h1 { font-size:36px; }
+  .hero--background .hero-trust { flex-wrap:wrap; gap:12px; }
+  .hero--background .hero-trust .hero-heritage { padding-left:0; border:0; max-width:none; }
+}
+@media (max-width:899px) {
+  .hero.hero--background {
+    padding-block:300px 32px; background-size:auto 340px; background-position:right top;
+  }
+  .hero--background .hero-copy { width:100%; max-width:640px; margin-inline:auto; padding:32px; }
+  .hero--background .hero-copy h1 { font-size:36px; }
+}
+@media (max-width:767px) {
+  .hero.hero--background { padding-block:240px 28px; background-size:auto 280px; }
+  .hero--background .hero-copy { padding:24px; border-radius:16px; }
+  .hero--background .hero-copy h1 { font-size:32px; margin-bottom:20px; }
+  .hero--background .hero-copy .lead { margin-bottom:22px; }
+  .hero--background .hero-trust { margin-top:22px; padding-top:18px; }
+}
+@media (max-width:359px) {
+  .hero--background .hero-copy { padding:20px; }
+  .hero--background .hero-copy h1 { font-size:30px; }
+}
+
 </style>
 </head>
 <body>
@@ -1021,7 +1062,7 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
 <main id="main">
 
 <!-- ======================= 1. HERO ======================= -->
-<section class="sec sec--cream hero" aria-labelledby="hero-title">
+<section class="sec sec--cream hero hero--background" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <h1 id="hero-title">Personalized Care for Hearing Loss and Hearing Aids in Victoria, TX</h1>
@@ -1051,12 +1092,6 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
       </div>
     </div>
 
-    <div class="hero-media">
-      <!-- IMG-HERO-01: user-selected illustrative conversation image. -->
-      <figure class="hero-image" data-image-id="IMG-HERO-01">
-        <img src="https://assets.cdn.filesafe.space/tiHIbXXZFe4aivLfJzFf/media/6aed1c59d15674a4827ce8c6.webp" alt="Illustrative hearing-care consultation" width="1000" height="1000" fetchpriority="high" decoding="async">
-      </figure>
-    </div>
   </div>
 </section>
 
