@@ -693,12 +693,12 @@ dialog.form-dialog::backdrop { background:rgba(5,28,59,.66); }
 @media (max-width:599px) {
   .hero .btn-row { gap:12px; }
 }
-button.appointment-secondary { display:inline-flex; align-items:center; justify-content:center; gap:9px; background:transparent; color:var(--primary); border:2px solid var(--primary); border-radius:8px; box-shadow:none; padding:12px 22px; min-height:54px; font:600 16px/1.4 var(--font-body); text-align:center; text-decoration:none; }
+button.appointment-secondary { display:inline-flex; align-items:center; justify-content:center; gap:9px; background:transparent; color:#000; border:2px solid #000; border-radius:8px; box-shadow:none; padding:12px 22px; min-height:54px; font:600 16px/1.4 var(--font-body); text-align:center; text-decoration:none; }
 button.appointment-secondary>span { text-decoration:none; }
 button.appointment-secondary .icon { width:18px; height:18px; stroke:currentColor; fill:none; flex:none; }
-button.appointment-secondary:hover { background:var(--primary); color:#fff; }
-.on-dark button.appointment-secondary { color:#fff; border-color:#fff; }
-.on-dark button.appointment-secondary:hover { background:#fff; color:var(--navy); border-color:#fff; }
+button.appointment-secondary:hover { background:#000; color:#fff; }
+.on-dark button.appointment-secondary { background:#fff; color:#000; border-color:#000; }
+.on-dark button.appointment-secondary:hover { background:var(--light-blue); color:#000; border-color:#000; }
 .cta-pair { display:flex; align-items:center; flex-wrap:wrap; gap:14px 24px; }
 .hero .btn-row>.appointment-secondary { padding-inline:22px; }
 #what-to-expect .steps-foot>.cta-pair { grid-area:action; }
