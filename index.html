@@ -966,8 +966,8 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
 }
 .hero--background .hero-grid { display:block; }
 .hero--background .hero-copy {
-  width:min(100%,640px); padding:36px; background:#fdf4ed;
-  border:1px solid #b98b68; border-radius:20px;
+  width:min(100%,640px); padding:36px; background:var(--light-blue);
+  border:1px solid var(--navy); border-radius:20px;
   box-shadow:0 14px 36px rgba(5,28,59,.12);
 }
 .hero--background .hero-copy h1 { max-width:none; font-size:clamp(2.25rem,3vw,2.75rem); line-height:1.17; margin-bottom:22px; }
@@ -997,6 +997,23 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
   .hero--background .hero-copy { padding:20px; }
   .hero--background .hero-copy h1 { font-size:30px; }
 }
+
+
+/* Light-blue surfaces use navy outlines and dividers. */
+.hero--background .hero-trust,
+.hero--background .hero-trust .hero-heritage,
+.recognition .moments,
+.recognition .moment+.moment,
+#specialist .provider-profile,
+#specialist .provider-caption,
+#reviews .review,
+#reviews .proof-cta,
+#hearing-options .aid-feature-grid>div,
+#what-to-expect .visit-accordion,
+#what-to-expect .visit-accordion .process-details+.process-details,
+#faqs .faq-answer,
+#find-us .map-container,
+#find-us .loc-card { border-color:var(--navy); }
 
 </style>
 </head>
