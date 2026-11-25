@@ -942,6 +942,21 @@ button.appointment-secondary:hover { background:transparent; color:var(--primary
   #specialist .heritage-team .heritage-team-story>p+p { margin-top:16px !important; }
 }
 
+
+/* Brand palette: balance the website's light blue with the existing warm beige. */
+:root { --light-blue:#e7eef4; }
+.hero { background:linear-gradient(115deg,#fffaf6 0%,#fdf4ed 48%,#e7eef4 100%); }
+#reviews,#find-us { background:var(--light-blue); }
+.recognition .moments { background:linear-gradient(120deg,var(--light-blue),var(--cream)); }
+#specialist .provider-profile { background:var(--light-blue); }
+#hearing-options { background:var(--cream); }
+#hearing-options .aid-feature-grid>div { background:var(--light-blue); border-color:#c8d8e4; }
+#what-to-expect .visit-accordion { background:var(--light-blue); }
+#faqs .faq-answer { background:var(--light-blue); }
+@media (max-width:767px) {
+  .hero { background:linear-gradient(160deg,#fffaf6 0%,#fdf4ed 48%,#e7eef4 100%); }
+}
+
 </style>
 </head>
 <body>
